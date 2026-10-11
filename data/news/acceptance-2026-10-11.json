@@ -1,0 +1,123 @@
+{
+  "old_records": {
+    "models": {
+      "prior_records": 41,
+      "all_preserved": true,
+      "unchanged_payloads": true,
+      "current_count": 44
+    },
+    "runs": {
+      "prior_records": 12,
+      "all_preserved": true,
+      "unchanged_payloads": true,
+      "current_count": 12
+    },
+    "forecasts": {
+      "prior_records": 7144,
+      "all_preserved": true,
+      "unchanged_payloads": true,
+      "current_count": 7878
+    },
+    "evaluations": {
+      "prior_records": 7144,
+      "all_preserved": true,
+      "unchanged_payloads": true,
+      "current_count": 7876
+    }
+  },
+  "selected_model_unchanged": true,
+  "sources": {
+    "schema_version": "news/1",
+    "sources": [
+      {
+        "id": "federal-reserve",
+        "kind": "forward RSS",
+        "url": "https://www.federalreserve.gov/feeds/press_all.xml"
+      }
+    ],
+    "classifiers": [
+      {
+        "id": "keywords",
+        "state": "configured",
+        "model": "keywords/2",
+        "label": "Deterministic rules (not calibrated)"
+      },
+      {
+        "id": "jev",
+        "state": "not_configured",
+        "model": "jev-1.13.0",
+        "price_per_million_input_usd": 0.042
+      }
+    ],
+    "markets": [
+      {
+        "instrument_id": "BTCUSDT",
+        "asset_class": "crypto",
+        "venue": "Binance Spot",
+        "currency": "USDT",
+        "name": "BTC/USDT",
+        "aliases": [
+          "BTCUSDT",
+          "BTC/USDT",
+          "BTC",
+          "bitcoin"
+        ],
+        "taxonomy": "news-taxonomy/1",
+        "version": "506c5fda242f59d06187b65d95824f284a27fdb394debfe1947c52a1091bf073"
+      },
+      {
+        "instrument_id": "ETHUSDT",
+        "asset_class": "crypto",
+        "venue": "Binance Spot",
+        "currency": "USDT",
+        "name": "ETH/USDT",
+        "aliases": [
+          "ETHUSDT",
+          "ETH/USDT",
+          "ETH",
+          "ethereum"
+        ],
+        "taxonomy": "news-taxonomy/1",
+        "version": "1f2262e1b2c38108d3c0514f9d85fb525efe7c3627dfd611b6302ee537e77c08"
+      }
+    ],
+    "article_count": 20,
+    "imported_providers": [
+      "federal-reserve"
+    ],
+    "trading": "not_enabled",
+    "news_forecasting": "experimental",
+    "historical_notice": "No historical coverage is inferred from forward feeds or publication dates."
+  },
+  "coverage": {
+    "symbol": "BTCUSDT",
+    "periods": {
+      "training": {
+        "start": "2022-10-01T00:00:00+00:00",
+        "end_exclusive": "2025-10-01T00:00:00+00:00",
+        "published_versions": 0,
+        "available_versions": 0,
+        "source_continuity": "not_established"
+      },
+      "validation": {
+        "start": "2025-10-01T00:00:00+00:00",
+        "end_exclusive": "2026-06-01T00:00:00+00:00",
+        "published_versions": 0,
+        "available_versions": 0,
+        "source_continuity": "not_established"
+      },
+      "final_test": {
+        "start": "2026-06-01T00:00:00+00:00",
+        "end_exclusive": "2026-10-01T00:00:00+00:00",
+        "published_versions": 13,
+        "available_versions": 0,
+        "source_continuity": "not_established"
+      }
+    },
+    "provider_attestations_independently_audited": false,
+    "notice": "Version counts are not evidence of complete source coverage; publication alone is not historical availability"
+  },
+  "external_ai_cost_usd": 0,
+  "jev_saved_classifications": 0,
+  "latest_experiment": "news-run-361ee4097f0c4c1fb4b51c2d717f7071"
+}

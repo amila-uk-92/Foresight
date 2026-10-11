@@ -1,0 +1,154 @@
+{
+  "id": "9938a872c65519e963a442379e9f3a2d4e99aa6370239cc244ad975822e1f323",
+  "schema_version": "news-classification/1",
+  "article_id": "88eda3329e02aad994240a4b8d2778d88dca2e801899fcf30451e39de86df6e7",
+  "symbol": "BTCUSDT",
+  "profile_version": "506c5fda242f59d06187b65d95824f284a27fdb394debfe1947c52a1091bf073",
+  "classifier": "keywords",
+  "classifier_identity": "3982f9b325306b633496eec22ce245de7f26d924198c69037cd468125f3da98e",
+  "question_version": "keywords/1",
+  "novelty": "unknown; no earlier-event context supplied",
+  "original_response": {
+    "answers": {
+      "relevance": {
+        "type": "choice",
+        "choice": "relevant",
+        "probabilities": {
+          "relevant": 1.0,
+          "irrelevant": 0.0,
+          "unknown": 0.0
+        },
+        "confidence": 0.0
+      },
+      "category": {
+        "type": "choice",
+        "choice": "macro",
+        "probabilities": {
+          "regulatory": 0.0,
+          "macro": 1.0,
+          "security": 0.0,
+          "market_infrastructure": 0.0,
+          "flows_adoption": 0.0,
+          "corporate": 0.0,
+          "supply_network": 0.0,
+          "other": 0.0,
+          "unknown": 0.0
+        },
+        "confidence": 0.0
+      },
+      "framing": {
+        "type": "choice",
+        "choice": "neutral",
+        "probabilities": {
+          "positive": 0.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "neutral": 1.0,
+          "unknown": 0.0
+        },
+        "confidence": 0.0
+      },
+      "event_status": {
+        "type": "choice",
+        "choice": "announcement",
+        "probabilities": {
+          "announcement": 1.0,
+          "realised": 0.0,
+          "commentary": 0.0,
+          "unverified": 0.0,
+          "unknown": 0.0
+        },
+        "confidence": 0.0
+      },
+      "support": {
+        "type": "choice",
+        "choice": "text",
+        "probabilities": {
+          "headline": 0.0,
+          "text": 1.0,
+          "none": 0.0
+        },
+        "confidence": 0.0
+      }
+    },
+    "model": "keywords/1",
+    "usage": {
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "cost_usd": 0,
+    "latency_seconds": 0,
+    "probability_note": "Rule indicators, not calibrated probabilities; confidence not estimated"
+  },
+  "answers": {
+    "relevance": {
+      "type": "choice",
+      "choice": "relevant",
+      "probabilities": {
+        "relevant": 1.0,
+        "irrelevant": 0.0,
+        "unknown": 0.0
+      },
+      "confidence": 0.0
+    },
+    "category": {
+      "type": "choice",
+      "choice": "macro",
+      "probabilities": {
+        "regulatory": 0.0,
+        "macro": 1.0,
+        "security": 0.0,
+        "market_infrastructure": 0.0,
+        "flows_adoption": 0.0,
+        "corporate": 0.0,
+        "supply_network": 0.0,
+        "other": 0.0,
+        "unknown": 0.0
+      },
+      "confidence": 0.0
+    },
+    "framing": {
+      "type": "choice",
+      "choice": "neutral",
+      "probabilities": {
+        "positive": 0.0,
+        "negative": 0.0,
+        "mixed": 0.0,
+        "neutral": 1.0,
+        "unknown": 0.0
+      },
+      "confidence": 0.0
+    },
+    "event_status": {
+      "type": "choice",
+      "choice": "announcement",
+      "probabilities": {
+        "announcement": 1.0,
+        "realised": 0.0,
+        "commentary": 0.0,
+        "unverified": 0.0,
+        "unknown": 0.0
+      },
+      "confidence": 0.0
+    },
+    "support": {
+      "type": "choice",
+      "choice": "text",
+      "probabilities": {
+        "headline": 0.0,
+        "text": 1.0,
+        "none": 0.0
+      },
+      "confidence": 0.0
+    }
+  },
+  "model": "keywords/1",
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "cost_usd": 0,
+  "latency_seconds": 0,
+  "probability_note": "Rule indicators, not calibrated probabilities; confidence not estimated",
+  "created_at": "2026-10-11T12:29:19.778990+00:00"
+}

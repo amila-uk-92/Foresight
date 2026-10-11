@@ -1,0 +1,161 @@
+{
+  "id": "29f5102cc5fca0c4cda72231fbcde9033f2b196e76c49c6f31b0ad1b40e4b96e",
+  "schema_version": "news-classification/1",
+  "article_id": "c2cfe5cf720befe8ccca21d0b4b1f614e41897976c682d76337f2d63f6322856",
+  "symbol": "BTCUSDT",
+  "profile_version": "506c5fda242f59d06187b65d95824f284a27fdb394debfe1947c52a1091bf073",
+  "classifier": "keywords",
+  "classifier_identity": "5eeffe7fb33dc2a99fedab21687d8eccf0da4eb070e4680644d9e0fa8a334fba",
+  "question_version": "keywords/2",
+  "requested_at": "2026-10-11T12:40:05.602671+00:00",
+  "input_hash": "7388cfad49a402557b316a27cd48cf77e9b4c7d588ebe5a875df876a3d216922",
+  "supporting_passage": {
+    "id": "text",
+    "text": "Federal Reserve Board announces termination of enforcement actions with United Texas Bank, Quontic Bank Acquisition Corp., and Quontic Bank Holdings Corp.",
+    "semantic_support": "not_independently_verified"
+  },
+  "novelty": "unknown; no earlier-event context supplied",
+  "original_response": {
+    "answers": {
+      "relevance": {
+        "type": "choice",
+        "choice": "unknown",
+        "probabilities": {
+          "relevant": 0.0,
+          "irrelevant": 0.0,
+          "unknown": 1.0
+        },
+        "confidence": 0.0
+      },
+      "category": {
+        "type": "choice",
+        "choice": "unknown",
+        "probabilities": {
+          "regulatory": 0.0,
+          "macro": 0.0,
+          "security": 0.0,
+          "market_infrastructure": 0.0,
+          "flows_adoption": 0.0,
+          "corporate": 0.0,
+          "supply_network": 0.0,
+          "other": 0.0,
+          "unknown": 1.0
+        },
+        "confidence": 0.0
+      },
+      "framing": {
+        "type": "choice",
+        "choice": "neutral",
+        "probabilities": {
+          "positive": 0.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "neutral": 1.0,
+          "unknown": 0.0
+        },
+        "confidence": 0.0
+      },
+      "event_status": {
+        "type": "choice",
+        "choice": "announcement",
+        "probabilities": {
+          "announcement": 1.0,
+          "realised": 0.0,
+          "commentary": 0.0,
+          "unverified": 0.0,
+          "unknown": 0.0
+        },
+        "confidence": 0.0
+      },
+      "support": {
+        "type": "choice",
+        "choice": "text",
+        "probabilities": {
+          "headline": 0.0,
+          "text": 1.0,
+          "none": 0.0
+        },
+        "confidence": 0.0
+      }
+    },
+    "model": "keywords/2",
+    "usage": {
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "cost_usd": 0,
+    "latency_seconds": 0,
+    "probability_note": "Rule indicators, not calibrated probabilities; confidence not estimated"
+  },
+  "answers": {
+    "relevance": {
+      "type": "choice",
+      "choice": "unknown",
+      "probabilities": {
+        "relevant": 0.0,
+        "irrelevant": 0.0,
+        "unknown": 1.0
+      },
+      "confidence": 0.0
+    },
+    "category": {
+      "type": "choice",
+      "choice": "unknown",
+      "probabilities": {
+        "regulatory": 0.0,
+        "macro": 0.0,
+        "security": 0.0,
+        "market_infrastructure": 0.0,
+        "flows_adoption": 0.0,
+        "corporate": 0.0,
+        "supply_network": 0.0,
+        "other": 0.0,
+        "unknown": 1.0
+      },
+      "confidence": 0.0
+    },
+    "framing": {
+      "type": "choice",
+      "choice": "neutral",
+      "probabilities": {
+        "positive": 0.0,
+        "negative": 0.0,
+        "mixed": 0.0,
+        "neutral": 1.0,
+        "unknown": 0.0
+      },
+      "confidence": 0.0
+    },
+    "event_status": {
+      "type": "choice",
+      "choice": "announcement",
+      "probabilities": {
+        "announcement": 1.0,
+        "realised": 0.0,
+        "commentary": 0.0,
+        "unverified": 0.0,
+        "unknown": 0.0
+      },
+      "confidence": 0.0
+    },
+    "support": {
+      "type": "choice",
+      "choice": "text",
+      "probabilities": {
+        "headline": 0.0,
+        "text": 1.0,
+        "none": 0.0
+      },
+      "confidence": 0.0
+    }
+  },
+  "model": "keywords/2",
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "cost_usd": 0,
+  "latency_seconds": 0,
+  "probability_note": "Rule indicators, not calibrated probabilities; confidence not estimated",
+  "created_at": "2026-10-11T12:40:05.602774+00:00"
+}

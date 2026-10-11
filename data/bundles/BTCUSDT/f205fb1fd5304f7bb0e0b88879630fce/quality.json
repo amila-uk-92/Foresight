@@ -1,0 +1,33 @@
+{
+  "symbol": "BTCUSDT",
+  "status": "warnings",
+  "is_verified": false,
+  "total_expected": 35064,
+  "total_actual": 35063,
+  "completeness_percentage": 99.997148,
+  "missing_hours_count": 1,
+  "missing_intervals": [
+    {
+      "start": "2023-03-24T13:00:00+00:00",
+      "end": "2023-03-24T14:00:00+00:00",
+      "hours": "1"
+    }
+  ],
+  "duplicate_count": 0,
+  "conflicting_duplicate_count": 0,
+  "invalid_ohlc_count": 0,
+  "negative_volume_count": 0,
+  "non_positive_price_count": 0,
+  "timestamp_alignment_valid": true,
+  "coverage_start": "2022-10-01T00:00:00+00:00",
+  "coverage_end": "2026-09-30T23:00:00+00:00",
+  "cross_market_aligned": null,
+  "issues": [
+    {
+      "category": "Coverage Gaps",
+      "description": "Missing 1 hourly records in configured range.",
+      "count": 1
+    }
+  ],
+  "generated_at": "2026-10-10T20:36:36.333077+00:00"
+}

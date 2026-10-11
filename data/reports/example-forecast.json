@@ -1,0 +1,159 @@
+{
+  "id": "afc9b59a-9fb4-5233-abc2-8fc7e8885c42",
+  "run_id": "prediction-pv-9fc7053ddb87",
+  "role": "coordinated",
+  "specialist_id": "price-volume",
+  "contract_version": "1.0",
+  "model_version": "pv-9fc7053ddb87",
+  "symbol": "BTCUSDT",
+  "market": "Binance Spot",
+  "quote_currency": "USDT",
+  "origin": "2026-06-01T00:00:00+00:00",
+  "generated_at": "2026-10-10T20:35:19.151057+00:00",
+  "latest_input_availability": "2026-06-01T00:00:00+00:00",
+  "latest_input_close": "2026-05-31T23:59:59.999999+00:00",
+  "dataset_version": "50e0fd479bb810c38f0ccc38dbc7ae7bbf519ca7a1b700a88e557461204c1dc6",
+  "training_cutoff": "2026-06-01T00:00:00+00:00",
+  "origin_price": 73674.39,
+  "points": [
+    {
+      "target": "2026-06-02T00:00:00+00:00",
+      "horizon_hours": 24,
+      "median": 73820.53068598043,
+      "lower": 71860.342463515,
+      "upper": 75686.73233569901
+    },
+    {
+      "target": "2026-06-03T00:00:00+00:00",
+      "horizon_hours": 48,
+      "median": 74023.81290060554,
+      "lower": 70925.63667783154,
+      "upper": 76539.15989140735
+    },
+    {
+      "target": "2026-06-04T00:00:00+00:00",
+      "horizon_hours": 72,
+      "median": 73868.31080849888,
+      "lower": 69957.10551172539,
+      "upper": 76837.29557690027
+    },
+    {
+      "target": "2026-06-05T00:00:00+00:00",
+      "horizon_hours": 96,
+      "median": 73990.73979533816,
+      "lower": 69900.4959964533,
+      "upper": 77227.46576141873
+    },
+    {
+      "target": "2026-06-06T00:00:00+00:00",
+      "horizon_hours": 120,
+      "median": 73991.06868691725,
+      "lower": 69562.68546562461,
+      "upper": 77778.14540467299
+    },
+    {
+      "target": "2026-06-07T00:00:00+00:00",
+      "horizon_hours": 144,
+      "median": 73932.2567655209,
+      "lower": 70115.33655511923,
+      "upper": 78236.64736895195
+    },
+    {
+      "target": "2026-06-08T00:00:00+00:00",
+      "horizon_hours": 168,
+      "median": 73679.3002029761,
+      "lower": 69726.6227905417,
+      "upper": 78333.41504724116
+    }
+  ],
+  "probabilities": {
+    "positive": 0.5,
+    "negative": 0.5,
+    "zero": 0.0
+  },
+  "configuration_id": "3e8fdea124f4d5d73ec9",
+  "definitions": {
+    "central_estimate": "Median",
+    "interval": "Pointwise 80% prediction intervals",
+    "target": "Close of exact hourly candle ending at origin + horizon; origin uses candle ending at origin",
+    "zero_return": "Exact zero predicted log-return is a separate probability mass; positive + negative + zero = 1"
+  },
+  "quality_flags": [
+    "Missing hourly candles retained; incomplete examples excluded"
+  ],
+  "status": "ready",
+  "mode": "prediction",
+  "input_summary": {
+    "lookback_days": 30,
+    "feature_values": {
+      "return_1h": -0.0036611856677950527,
+      "return_24h": -0.002846189918187747,
+      "return_7d": -0.0449934535730776,
+      "return_30d": -0.06001240119603857,
+      "lookback_return": -0.06001240119603857,
+      "volatility_24h": 0.0017107896482972545,
+      "volatility_7d": 0.002981009056514024,
+      "lookback_volatility": 0.003257557989576649,
+      "range_24h": 0.0031007739609260135,
+      "volume_24h_vs_7d": -0.67411233585649,
+      "volume_7d_vs_lookback": 0.00797796423903077,
+      "quote_volume_24h_vs_7d": -0.6859584457293841,
+      "taker_fraction_24h": 0.48772538009734295,
+      "log_trades_24h": 10.94748304765048,
+      "weekday_sin": 0.0,
+      "weekday_cos": 1.0
+    },
+    "start": "2026-05-02T00:00:00+00:00",
+    "end": "2026-06-01T00:00:00+00:00",
+    "candle_count": 720
+  },
+  "baseline": {
+    "name": "No-change median; earlier empirical log-return 10/90% intervals",
+    "sample_count": 24,
+    "latest_target": "2026-06-01T00:00:00+00:00",
+    "positive_probability": 0.25,
+    "points": [
+      {
+        "median": 73674.39,
+        "lower": 72426.30687452691,
+        "upper": 74877.51262133647
+      },
+      {
+        "median": 73674.39,
+        "lower": 71873.21076156647,
+        "upper": 75154.78710310144
+      },
+      {
+        "median": 73674.39,
+        "lower": 71333.70664995085,
+        "upper": 75616.57102454346
+      },
+      {
+        "median": 73674.39,
+        "lower": 71350.4728148509,
+        "upper": 75200.04958855423
+      },
+      {
+        "median": 73674.39,
+        "lower": 70501.99469855824,
+        "upper": 74895.35550860234
+      },
+      {
+        "median": 73674.39,
+        "lower": 70462.79438991928,
+        "upper": 75267.446620398
+      },
+      {
+        "median": 73674.39,
+        "lower": 70009.98431943716,
+        "upper": 75489.39575867714
+      }
+    ]
+  },
+  "specialist_forecast_id": "ab245a6d-0e28-5870-9bcc-e772fd309cfb",
+  "coordinator_version": "1.0",
+  "weights": {
+    "price-volume": 1.0
+  },
+  "coordination": "Single-specialist pass-through"
+}

@@ -1,0 +1,197 @@
+{
+  "id": "2fc53334a9554ddba91f9feda3f43dfa",
+  "created_at": "2026-10-10T20:30:08.181903+00:00",
+  "mode": "adaptive",
+  "status": "complete",
+  "model_id": "pv-9fc7053ddb87",
+  "initial_model_id": "pv-9fc7053ddb87",
+  "dataset_version": "50e0fd479bb810c38f0ccc38dbc7ae7bbf519ca7a1b700a88e557461204c1dc6",
+  "config": {
+    "mode": "adaptive"
+  },
+  "promotion_policy": {
+    "cadence_days": 30,
+    "comparison_days": 45,
+    "minimum_daily_origins": 30,
+    "mae_improvement_fraction": 0.01,
+    "interval_score_must_not_worsen": true,
+    "coverage_floor": 0.7,
+    "baseline_mae_must_not_worsen": true
+  },
+  "start": "2026-06-01T00:00:00+00:00",
+  "end": "2026-10-01T00:00:00+00:00",
+  "cadence": "daily 00:00 UTC",
+  "clock": "2026-10-01T00:00:00+00:00",
+  "skipped_origins": [],
+  "evaluation_label": "Final test: configuration selected only from earlier development data",
+  "summary": {
+    "run_id": "2fc53334a9554ddba91f9feda3f43dfa",
+    "forecast_count": 122,
+    "horizons": [
+      {
+        "horizon_hours": 24,
+        "sample_count": 122,
+        "mae_usdt": 1026.2857890847338,
+        "return_mae_percentage_points": 1.490019044410761,
+        "coverage": 0.860655737704918,
+        "width_usdt": 3587.283333848269,
+        "interval_score_usdt": 5677.955389626934,
+        "baseline_mae_usdt": 1011.3007377049187,
+        "baseline_coverage": 0.7622950819672131,
+        "baseline_interval_score_usdt": 6195.19305549924,
+        "mae_95pct_block_bootstrap": [
+          816.536516629553,
+          1271.900891581352
+        ]
+      },
+      {
+        "horizon_hours": 48,
+        "sample_count": 121,
+        "mae_usdt": 1593.8219268649696,
+        "return_mae_percentage_points": 2.3106033552333693,
+        "coverage": 0.8429752066115702,
+        "width_usdt": 5250.2573050154615,
+        "interval_score_usdt": 8474.764464611617,
+        "baseline_mae_usdt": 1567.5114876033058,
+        "baseline_coverage": 0.7024793388429752,
+        "baseline_interval_score_usdt": 9357.922488176657,
+        "mae_95pct_block_bootstrap": [
+          1204.105796828807,
+          2027.4165365121262
+        ]
+      },
+      {
+        "horizon_hours": 72,
+        "sample_count": 120,
+        "mae_usdt": 1895.671979703913,
+        "return_mae_percentage_points": 2.7604984000617576,
+        "coverage": 0.8416666666666667,
+        "width_usdt": 6430.321857664879,
+        "interval_score_usdt": 10848.484666636057,
+        "baseline_mae_usdt": 1907.3332500000004,
+        "baseline_coverage": 0.7166666666666667,
+        "baseline_interval_score_usdt": 12215.904840001813,
+        "mae_95pct_block_bootstrap": [
+          1365.0135535182742,
+          2519.5419280413207
+        ]
+      },
+      {
+        "horizon_hours": 96,
+        "sample_count": 119,
+        "mae_usdt": 2225.992746787102,
+        "return_mae_percentage_points": 3.23282849136321,
+        "coverage": 0.8571428571428571,
+        "width_usdt": 6832.400646199128,
+        "interval_score_usdt": 12769.948208049882,
+        "baseline_mae_usdt": 2189.5121008403366,
+        "baseline_coverage": 0.6554621848739496,
+        "baseline_interval_score_usdt": 15120.09601681198,
+        "mae_95pct_block_bootstrap": [
+          1498.8943714379532,
+          2951.6024666144212
+        ]
+      },
+      {
+        "horizon_hours": 120,
+        "sample_count": 118,
+        "mae_usdt": 2569.285121402736,
+        "return_mae_percentage_points": 3.7492853509138975,
+        "coverage": 0.8389830508474576,
+        "width_usdt": 7659.7113606294015,
+        "interval_score_usdt": 14576.108949617037,
+        "baseline_mae_usdt": 2476.189067796611,
+        "baseline_coverage": 0.652542372881356,
+        "baseline_interval_score_usdt": 18273.689117353344,
+        "mae_95pct_block_bootstrap": [
+          1701.4622117872836,
+          3421.06806867538
+        ]
+      },
+      {
+        "horizon_hours": 144,
+        "sample_count": 117,
+        "mae_usdt": 2817.693731508212,
+        "return_mae_percentage_points": 4.135340274220791,
+        "coverage": 0.8034188034188035,
+        "width_usdt": 7560.313920629023,
+        "interval_score_usdt": 15375.94594181287,
+        "baseline_mae_usdt": 2816.653076923077,
+        "baseline_coverage": 0.6666666666666666,
+        "baseline_interval_score_usdt": 20324.111632163007,
+        "mae_95pct_block_bootstrap": [
+          1853.2933672701067,
+          3841.2362899453105
+        ]
+      },
+      {
+        "horizon_hours": 168,
+        "sample_count": 116,
+        "mae_usdt": 3086.1496576880195,
+        "return_mae_percentage_points": 4.5518037430335365,
+        "coverage": 0.7758620689655172,
+        "width_usdt": 8007.049110007689,
+        "interval_score_usdt": 16492.521780932268,
+        "baseline_mae_usdt": 3056.0111206896563,
+        "baseline_coverage": 0.6551724137931034,
+        "baseline_interval_score_usdt": 22147.738770662414,
+        "mae_95pct_block_bootstrap": [
+          2000.3508662240777,
+          4362.4709775586425
+        ]
+      }
+    ],
+    "by_model": {
+      "pv-9fc7053ddb87": {
+        "day7_sample_count": 116,
+        "day7_mae_usdt": 3086.1496576880195
+      }
+    },
+    "weekly": {
+      "sample_count": 116,
+      "direction_accuracy": 0.5,
+      "brier_score": 0.25510103904649706,
+      "baseline_brier_score": 0.31887571839080464
+    },
+    "probability_calibration": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "sample_count": 0,
+        "predicted_positive": null,
+        "actual_positive": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "sample_count": 0,
+        "predicted_positive": null,
+        "actual_positive": null
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6000000000000001,
+        "sample_count": 106,
+        "predicted_positive": 0.5056272757365111,
+        "actual_positive": 0.5566037735849056
+      },
+      {
+        "lower": 0.6000000000000001,
+        "upper": 0.8,
+        "sample_count": 10,
+        "predicted_positive": 0.6368421052631579,
+        "actual_positive": 0.4
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "sample_count": 0,
+        "predicted_positive": null,
+        "actual_positive": null
+      }
+    ],
+    "calibration_status": "Available",
+    "uncertainty_method": "95% moving-block bootstrap for MAE, block length 7 daily origins; descriptive, not proof of superiority",
+    "baseline": "No-change price, earlier historical-frequency direction, earlier empirical log-return pointwise intervals"
+  }
+}

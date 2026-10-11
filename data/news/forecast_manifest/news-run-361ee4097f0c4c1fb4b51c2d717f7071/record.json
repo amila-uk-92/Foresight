@@ -1,0 +1,62 @@
+{
+  "id": "news-run-361ee4097f0c4c1fb4b51c2d717f7071",
+  "schema_version": "news-forecast-manifest/1",
+  "symbol": "BTCUSDT",
+  "policy": "strict",
+  "lookback_days": 30,
+  "minimum_origins": 30,
+  "evidence_lookback_days": 7,
+  "dataset_version": "50e0fd479bb810c38f0ccc38dbc7ae7bbf519ca7a1b700a88e557461204c1dc6",
+  "article_snapshot": [
+    "19738ec6fd3a62b5c94d89155ed656fc692f08be20ef6e073e10fb21afe1f64d",
+    "1ccf4ec9af25ba8335bb3d2585ca7272a07eac44b5cb68eba7729c77ea1035a3",
+    "1f817dbe8c1cba9c477f83abc5a9a64de0eca460f2917d75abd334652c70a467",
+    "425e69c154865be80f63da1be674527ea6d4c563910f5ec3dae3fa524f3e0d72",
+    "452976256b8f3dfb80ea4d7ef9e967e5f0c34d18075c930dcbfa3335b7538e20",
+    "49acf31ac20398c15a26dfb919a2ac431362c65da1ed9294aa52eac526247d48",
+    "51bfc37ff40adc14c86de1e8bf68dc1c67586031e87695bad639a8736676e170",
+    "6a68b75a8875b33751626fe0117690ca68fd26b56cf85f836ff22a3d322efeb8",
+    "714ea831f936b5c18b389e1b17df883a4d003489599168733390f7f30ed6f1a8",
+    "85f73e12714e254ef33aec3e70c3f291fe3f41043a1bc902bf2902796e8bbceb",
+    "88eda3329e02aad994240a4b8d2778d88dca2e801899fcf30451e39de86df6e7",
+    "8a6f3837104ec4f9c7281f1a03869c5fc3e1c634a32387e8c19192fefad9c97f",
+    "a3586598bf40f4c91915e12b88e2962ccdf9057077ce0a3b74f19e4899fc3300",
+    "a3e079f2c3eeb05428d30240cc2e1a7fa949056f5c4e4544e47185bf16b00808",
+    "bf16c361b8e9e52a2125406b2434d68c1ae6084f7d95099a3084eb504576e9f3",
+    "c2cfe5cf720befe8ccca21d0b4b1f614e41897976c682d76337f2d63f6322856",
+    "dfeaaf7e770f39ec7d31ead69f53c337be9e3ac95547d40dddcc33442209469d",
+    "e091ab25e055ddb93a3550e6b191570dc3099a2434c719985041a1146aa3359e",
+    "e47dcc12406919536a4713976ff697a109e7e4140ff5ac172dc29c856663d9f0",
+    "e5dc33d00785ef92d58032fbacd47436fc87f7c135efa9f3cadd1516adc7930c"
+  ],
+  "promotion_policy": {
+    "day7_min_improvement_fraction": 0.01,
+    "paired_95pct_upper_below_zero": true,
+    "other_horizon_max_regression_fraction": 0.02,
+    "minimum_complete_origins": 60,
+    "coverage_80pct_bounds": [
+      0.7,
+      0.9
+    ],
+    "interval_and_brier_no_worse": true,
+    "untouched_forward_confirmation_required": true
+  },
+  "implementation_revision": "9ec4bfc553a3c19849af64e98539d5884bb3938b424daac9cbee1154ccf2139b",
+  "incumbent_model_id": "pv-d962864deab9",
+  "incumbent_snapshot_id": "76b8b3deb43f36232dc06cd48ae0bc4bd26bc7a46c7f44d95f06083287fbcd86",
+  "cadence": "continuous",
+  "variants": [
+    "price_only",
+    "price_keywords",
+    "price_jev",
+    "news_jev"
+  ],
+  "candidate_alphas": [
+    1.0,
+    10.0,
+    100.0
+  ],
+  "mode": "frozen",
+  "evaluation_label": "Historical development; already inspected outcomes; never untouched confirmation",
+  "created_at": "2026-10-11T12:48:13.291992+00:00"
+}

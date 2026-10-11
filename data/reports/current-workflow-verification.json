@@ -1,0 +1,94 @@
+{
+  "checks": "56 tests passed; frontend build and lint passed",
+  "frozen_and_adaptive": {
+    "frozen": {
+      "run_id": "eef88d3020544470827d11b87e74acf5",
+      "forecast_count": 122,
+      "skipped": 0,
+      "day7": {
+        "horizon_hours": 168,
+        "sample_count": 116,
+        "mae_usdt": 3086.1496576880195,
+        "return_mae_percentage_points": 4.5518037430335365,
+        "coverage": 0.7758620689655172,
+        "width_usdt": 8007.049110007689,
+        "interval_score_usdt": 16492.521780932268,
+        "baseline_mae_usdt": 3056.0111206896563,
+        "baseline_coverage": 0.6551724137931034,
+        "baseline_interval_score_usdt": 22147.738770662414,
+        "mae_95pct_block_bootstrap": [
+          2000.3508662240777,
+          4362.4709775586425
+        ],
+        "pending_count": 6,
+        "unscorable_count": 0
+      },
+      "development": false
+    },
+    "adaptive": {
+      "run_id": "b3c96d7ce4074552a532d11c60e34470",
+      "forecast_count": 122,
+      "skipped": 0,
+      "day7": {
+        "horizon_hours": 168,
+        "sample_count": 116,
+        "mae_usdt": 3086.1496576880195,
+        "return_mae_percentage_points": 4.5518037430335365,
+        "coverage": 0.7758620689655172,
+        "width_usdt": 8007.049110007689,
+        "interval_score_usdt": 16492.521780932268,
+        "baseline_mae_usdt": 3056.0111206896563,
+        "baseline_coverage": 0.6551724137931034,
+        "baseline_interval_score_usdt": 22147.738770662414,
+        "mae_95pct_block_bootstrap": [
+          2000.3508662240777,
+          4362.4709775586425
+        ],
+        "pending_count": 6,
+        "unscorable_count": 0
+      },
+      "development": false
+    }
+  },
+  "historical_prediction": {
+    "forecast_id": "e4477099-cc5c-5b14-b263-d8de7361afc2",
+    "model": "pv-2f1fbeaf1dd4",
+    "evaluated_targets": 7,
+    "immutable_after_scoring": true
+  },
+  "latest_prediction": {
+    "forecast_id": "f9acf6f6-9479-530b-84fd-c8030ea1ac08",
+    "origin": "2026-10-01T00:00:00+00:00",
+    "pending_targets": 7,
+    "retry_idempotent": true
+  },
+  "candidate_decisions": [
+    {
+      "candidate": "pv-093ca1452526",
+      "promoted": false,
+      "sample_count": 39
+    },
+    {
+      "candidate": "pv-93f0294aabe8",
+      "promoted": false,
+      "sample_count": 39
+    },
+    {
+      "candidate": "pv-5a27fc915956",
+      "promoted": false,
+      "sample_count": 39
+    },
+    {
+      "candidate": "pv-3afe5b840385",
+      "promoted": false,
+      "sample_count": 39
+    }
+  ],
+  "browser_console_errors": [],
+  "ui_issue": {
+    "severity": "minor",
+    "description": "Historical range selection loads longer input history, but the main chart and double-click reset use a fixed 14-day visible history window. Selecting 90 days still initially shows September 17 through October 8 for an October 1 origin.",
+    "file": "frontend/src/components/ForecastChart.tsx",
+    "line": 185
+  }
+}

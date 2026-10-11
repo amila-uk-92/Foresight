@@ -1,0 +1,16 @@
+{
+  "provider_article_id": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+  "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+  "publisher": "Federal Reserve Board",
+  "headline": "Federal Reserve issues FOMC statement",
+  "text": "Federal Reserve issues FOMC statement",
+  "language": "en",
+  "published_at": "2026-09-16T18:00:00+00:00",
+  "updated_at": null,
+  "provider_first_seen_at": null,
+  "availability_evidence": null,
+  "event_at": null,
+  "content_scope": "snippet",
+  "rights": "Public Federal Reserve RSS payload; no linked article scraping; verify reuse terms for redistribution.",
+  "event_id": null
+}

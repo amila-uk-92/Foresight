@@ -1,0 +1,25 @@
+# Python virtual environments & caches
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Frontend dependencies & build artifacts
+frontend/node_modules/
+frontend/dist/
+
+# macOS & editor artifacts
+.DS_Store
+*.swp
+
+# Temporary transfer archives & scratch directories
+.claude-transfer/
+.fs-*.tgz
+
+# Large runtime SQLite database & backups (>100 MB GitHub limit)
+data/backups/
+data/foresight.sqlite3
+data/foresight.sqlite3-shm
+data/foresight.sqlite3-wal
+data/server.log

@@ -1,0 +1,161 @@
+{
+  "id": "483ad482092c8c1e09bf4f54f82858a40697e3feeb7b80da7cb08745b988e73a",
+  "schema_version": "news-classification/1",
+  "article_id": "e47dcc12406919536a4713976ff697a109e7e4140ff5ac172dc29c856663d9f0",
+  "symbol": "BTCUSDT",
+  "profile_version": "506c5fda242f59d06187b65d95824f284a27fdb394debfe1947c52a1091bf073",
+  "classifier": "keywords",
+  "classifier_identity": "5eeffe7fb33dc2a99fedab21687d8eccf0da4eb070e4680644d9e0fa8a334fba",
+  "question_version": "keywords/2",
+  "requested_at": "2026-10-11T12:40:05.618512+00:00",
+  "input_hash": "617a25b2c4615c009fbb589ab7d93a29db477d8d5b1feef136f27cdc9eb48c3b",
+  "supporting_passage": {
+    "id": "text",
+    "text": "Federal Reserve Board issues enforcement action with Ontario Bancorporation, Inc.",
+    "semantic_support": "not_independently_verified"
+  },
+  "novelty": "unknown; no earlier-event context supplied",
+  "original_response": {
+    "answers": {
+      "relevance": {
+        "type": "choice",
+        "choice": "unknown",
+        "probabilities": {
+          "relevant": 0.0,
+          "irrelevant": 0.0,
+          "unknown": 1.0
+        },
+        "confidence": 0.0
+      },
+      "category": {
+        "type": "choice",
+        "choice": "unknown",
+        "probabilities": {
+          "regulatory": 0.0,
+          "macro": 0.0,
+          "security": 0.0,
+          "market_infrastructure": 0.0,
+          "flows_adoption": 0.0,
+          "corporate": 0.0,
+          "supply_network": 0.0,
+          "other": 0.0,
+          "unknown": 1.0
+        },
+        "confidence": 0.0
+      },
+      "framing": {
+        "type": "choice",
+        "choice": "neutral",
+        "probabilities": {
+          "positive": 0.0,
+          "negative": 0.0,
+          "mixed": 0.0,
+          "neutral": 1.0,
+          "unknown": 0.0
+        },
+        "confidence": 0.0
+      },
+      "event_status": {
+        "type": "choice",
+        "choice": "unknown",
+        "probabilities": {
+          "announcement": 0.0,
+          "realised": 0.0,
+          "commentary": 0.0,
+          "unverified": 0.0,
+          "unknown": 1.0
+        },
+        "confidence": 0.0
+      },
+      "support": {
+        "type": "choice",
+        "choice": "text",
+        "probabilities": {
+          "headline": 0.0,
+          "text": 1.0,
+          "none": 0.0
+        },
+        "confidence": 0.0
+      }
+    },
+    "model": "keywords/2",
+    "usage": {
+      "input_tokens": 0,
+      "output_tokens": 0
+    },
+    "cost_usd": 0,
+    "latency_seconds": 0,
+    "probability_note": "Rule indicators, not calibrated probabilities; confidence not estimated"
+  },
+  "answers": {
+    "relevance": {
+      "type": "choice",
+      "choice": "unknown",
+      "probabilities": {
+        "relevant": 0.0,
+        "irrelevant": 0.0,
+        "unknown": 1.0
+      },
+      "confidence": 0.0
+    },
+    "category": {
+      "type": "choice",
+      "choice": "unknown",
+      "probabilities": {
+        "regulatory": 0.0,
+        "macro": 0.0,
+        "security": 0.0,
+        "market_infrastructure": 0.0,
+        "flows_adoption": 0.0,
+        "corporate": 0.0,
+        "supply_network": 0.0,
+        "other": 0.0,
+        "unknown": 1.0
+      },
+      "confidence": 0.0
+    },
+    "framing": {
+      "type": "choice",
+      "choice": "neutral",
+      "probabilities": {
+        "positive": 0.0,
+        "negative": 0.0,
+        "mixed": 0.0,
+        "neutral": 1.0,
+        "unknown": 0.0
+      },
+      "confidence": 0.0
+    },
+    "event_status": {
+      "type": "choice",
+      "choice": "unknown",
+      "probabilities": {
+        "announcement": 0.0,
+        "realised": 0.0,
+        "commentary": 0.0,
+        "unverified": 0.0,
+        "unknown": 1.0
+      },
+      "confidence": 0.0
+    },
+    "support": {
+      "type": "choice",
+      "choice": "text",
+      "probabilities": {
+        "headline": 0.0,
+        "text": 1.0,
+        "none": 0.0
+      },
+      "confidence": 0.0
+    }
+  },
+  "model": "keywords/2",
+  "usage": {
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "cost_usd": 0,
+  "latency_seconds": 0,
+  "probability_note": "Rule indicators, not calibrated probabilities; confidence not estimated",
+  "created_at": "2026-10-11T12:40:05.618586+00:00"
+}

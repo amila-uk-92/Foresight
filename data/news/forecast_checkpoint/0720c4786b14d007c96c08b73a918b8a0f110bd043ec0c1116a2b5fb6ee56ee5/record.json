@@ -1,0 +1,11 @@
+{
+  "manifest_id": "news-run-361ee4097f0c4c1fb4b51c2d717f7071",
+  "symbol": "BTCUSDT",
+  "variant": "price_only",
+  "model_id": "news-model-ef9a438c901e",
+  "state": "forecast_saved",
+  "forecast_id": "288922dc-b766-59df-9acb-d7a033f8f20e",
+  "origin": "2026-07-27T00:00:00+00:00",
+  "id": "0720c4786b14d007c96c08b73a918b8a0f110bd043ec0c1116a2b5fb6ee56ee5",
+  "created_at": "2026-10-11T12:48:39.825945+00:00"
+}
