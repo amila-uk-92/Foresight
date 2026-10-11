@@ -1240,3 +1240,272 @@
 .news-focus > .news-head, .news-focus > nav, .news-focus > .news-job, .news-focus > .v-note,
 .news-focus > .news-controls, .news-focus > .news-metrics { display: none; }
 .lab-ws-body:has(.news-focus) > .news-legacy { display: none; }
+
+/* Top-Level Segmented Mode Tabs in Dataset & Forecast Lab */
+.v-top-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px;
+  border-radius: 999px;
+  background: #0b1626;
+  border: 1px solid #22354d;
+}
+.v-top-tabs button {
+  height: 30px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--v-muted);
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.v-top-tabs button:hover {
+  color: var(--v-text);
+}
+.v-top-tabs button.on {
+  background: #2dd4e8;
+  color: #061320;
+  box-shadow: 0 1px 6px rgba(45, 212, 232, 0.28);
+}
+
+/* Dataset -> News & Macro Dataset Preparation View */
+.news-dataset-stage {
+  overflow-y: auto;
+  min-height: 0;
+  padding-right: 2px;
+}
+.news-dataset-prep {
+  gap: 12px;
+  padding: 0 0 16px;
+}
+.news-prep-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+@media (max-width: 1100px) {
+  .news-prep-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.news-prep-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+}
+.news-prep-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.news-prep-card-head h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--v-text);
+}
+.news-full-btn {
+  width: 100%;
+  justify-content: center;
+}
+.news-card-cta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+}
+.news-card-cta-row > .news-full-btn {
+  flex: 1;
+}
+.news-form-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.news-form-rows label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11.5px;
+  color: var(--v-muted);
+}
+.news-form-rows select,
+.news-form-rows input {
+  width: 100%;
+  max-width: none !important;
+}
+.news-form-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+  gap: 8px;
+  align-items: end;
+}
+.news-preview-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+.news-optional-upload {
+  margin-top: 2px;
+  padding-top: 6px;
+  border-top: 1px dashed #22354d;
+}
+.news-optional-upload summary {
+  cursor: pointer;
+  user-select: none;
+}
+.news-file-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.news-table-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px 16px;
+}
+.news-table-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.news-table-header h3 {
+  margin: 0 0 2px;
+  font-size: 15px;
+}
+.news-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.news-conf-bar {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 90px;
+}
+.news-conf-bar .track {
+  flex: 1;
+  height: 6px;
+  border-radius: 99px;
+  background: #162940;
+  overflow: hidden;
+}
+.news-conf-bar .track i {
+  display: block;
+  height: 100%;
+  background: #2dd4e8;
+  border-radius: 99px;
+}
+.news-detail-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+  gap: 16px;
+}
+@media (max-width: 900px) {
+  .news-detail-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* Forecast Lab -> News & Macro Models View */
+.news-lab-mode {
+  flex: 1 1 0;
+  min-height: 0;
+  padding: 0;
+  gap: 10px;
+}
+.news-lab-toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+  padding: 10px 14px;
+  flex-shrink: 0;
+}
+.news-forecast-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 290px;
+  gap: 14px;
+  flex: 1 1 0;
+  min-height: 360px;
+}
+@media (max-width: 1100px) {
+  .news-forecast-stage {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+.news-chart-main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  min-height: 340px;
+}
+.news-chart-main > .lab-chart {
+  flex: 1 1 0;
+  min-height: 280px;
+}
+.news-side-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px;
+  background: #0c1829 !important;
+  border: 1px solid #22354d !important;
+  border-radius: 12px !important;
+}
+.news-side-summary h3 {
+  margin: 0;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--v-soft);
+}
+.news-side-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.news-side-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--v-muted);
+  padding: 3px 6px;
+  border-radius: 6px;
+}
+.news-side-row.active {
+  background: rgba(76, 154, 255, 0.14);
+  color: #77b5ff;
+  font-weight: 700;
+}
+.news-divider {
+  border: 0;
+  border-top: 1px solid #1e3148;
+  margin: 4px 0;
+}
+.news-cov-highlight {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.news-metrics-panel,
+.news-evidence-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-height: 0;
+  overflow: auto;
+}
+

@@ -16,11 +16,11 @@
   "id": "1ccf4ec9af25ba8335bb3d2585ca7272a07eac44b5cb68eba7729c77ea1035a3",
   "schema_version": "article/1",
   "provider": "federal-reserve",
-  "ingested_at": "2026-10-11T12:28:15.115830+00:00",
-  "effective_available_at": "2026-10-11T12:28:15.115830+00:00",
+  "ingested_at": "2026-10-11T14:50:06.205793+00:00",
+  "effective_available_at": "2026-10-11T14:50:06.205793+00:00",
   "availability_quality": "observed",
   "availability_note": "Only current ingestion is verified; no historic availability claim",
   "content_hash": "b155c698d08f5a32df4d6c7e388940aa9b62b015347fcfb5b8ad15ac74d03675",
   "predecessor_id": null,
-  "created_at": "2026-10-11T12:28:15.118468+00:00"
+  "created_at": "2026-10-11T14:50:06.211929+00:00"
 }

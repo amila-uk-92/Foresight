@@ -1,0 +1,109 @@
+{
+  "id": "1c377694c65b4256a9327aeacf8d6b2c",
+  "schema_version": "classification-experiment/1",
+  "packet_id": "424a1db876526f5a4abfbec1766a03f519d50c614babd5bc86f62a0d2311692c",
+  "symbol": "BTCUSDT",
+  "classifier": "openai",
+  "classification_ids": [
+    "cd7a954a8d271856ee784e60b6517959d14a2b013a1b1d919c282bf837cfc48d",
+    "e138dd30dc8730fd503cafc65af521a79e7237b8527510a0b9656aa4352e73db",
+    "8fb75910d7793027c8ba1f0baf7dbeaef75176df68777547bfb3bff0380711a9",
+    "2e6d22ef39cb1d385aa0408d74a84eb9ff68fcc76cb04f7a4d961687c4392c34",
+    "2d71b35e57b24cbb7c84d67dbba616539711820be729aad06ae0663eccd563d4",
+    "9902bfff1e9ca379f3d9bd9f2597f4ef0b2c003416f0b21194b1fd1d8e3b94c2",
+    "6e104124d57aef1003fb80273278b61bd1331c1674b2a4080387bc54a847c8dd",
+    "4fefc94faa229e5e318fce55263b019bcfc7138860ea101d1b0656cdbc62eb78",
+    "6e9d0e995db20e2d2eaa013ad1e83869dd5a76c0e31c5d954e27c5b7d20bcad2",
+    "26a94d3a7fdf10f0d6df1d6ce97ac87cbb66442c0fd8f77851bb7875006b5716",
+    "b8f52ee079f36db61b9e81ffc2f9d879c11dd97f2dfed034f06a06600a36b3cb",
+    "15f7a9a88e3cf6acdea270b6d79eea7d97b6f96978306ffd7073e38ce3f0d2e1",
+    "fdfc928d1e94381a60906504dd807a976d53f9e95c7aaa36e4f0db802bd51479",
+    "34d78126221e36ebc274ab99b155cc470fa9aab5339b9c4bf34f1f0d4665b02e",
+    "8d8b8492c83a7e2c5a0928cae775ba475dae2e13b4a20123694bb9ca7b067815",
+    "5628a6ac3f270f8a9c5cb2dabed56335854f168bcb23b04d826ad356738396f8",
+    "49dcf7f941870d0e385aaa981501639a7ff6fd120b3c0fc3c0868cbe56cce433"
+  ],
+  "errors": [
+    {
+      "article_id": "88eda3329e02aad994240a4b8d2778d88dca2e801899fcf30451e39de86df6e7",
+      "error": "OpenAI extraction failed; inspect saved provider responses and retry explicitly. Any uncertain charge reservation is retained."
+    },
+    {
+      "article_id": "dfeaaf7e770f39ec7d31ead69f53c337be9e3ac95547d40dddcc33442209469d",
+      "error": "OpenAI extraction failed; inspect saved provider responses and retry explicitly. Any uncertain charge reservation is retained."
+    },
+    {
+      "article_id": "e47dcc12406919536a4713976ff697a109e7e4140ff5ac172dc29c856663d9f0",
+      "error": "OpenAI extraction failed; inspect saved provider responses and retry explicitly. Any uncertain charge reservation is retained."
+    }
+  ],
+  "preview": {
+    "packet_id": "424a1db876526f5a4abfbec1766a03f519d50c614babd5bc86f62a0d2311692c",
+    "classifier": "openai",
+    "article_ids": [
+      "19738ec6fd3a62b5c94d89155ed656fc692f08be20ef6e073e10fb21afe1f64d",
+      "1ccf4ec9af25ba8335bb3d2585ca7272a07eac44b5cb68eba7729c77ea1035a3",
+      "1f817dbe8c1cba9c477f83abc5a9a64de0eca460f2917d75abd334652c70a467",
+      "425e69c154865be80f63da1be674527ea6d4c563910f5ec3dae3fa524f3e0d72",
+      "452976256b8f3dfb80ea4d7ef9e967e5f0c34d18075c930dcbfa3335b7538e20",
+      "49acf31ac20398c15a26dfb919a2ac431362c65da1ed9294aa52eac526247d48",
+      "51bfc37ff40adc14c86de1e8bf68dc1c67586031e87695bad639a8736676e170",
+      "6a68b75a8875b33751626fe0117690ca68fd26b56cf85f836ff22a3d322efeb8",
+      "714ea831f936b5c18b389e1b17df883a4d003489599168733390f7f30ed6f1a8",
+      "85f73e12714e254ef33aec3e70c3f291fe3f41043a1bc902bf2902796e8bbceb",
+      "88eda3329e02aad994240a4b8d2778d88dca2e801899fcf30451e39de86df6e7",
+      "8a6f3837104ec4f9c7281f1a03869c5fc3e1c634a32387e8c19192fefad9c97f",
+      "a3586598bf40f4c91915e12b88e2962ccdf9057077ce0a3b74f19e4899fc3300",
+      "a3e079f2c3eeb05428d30240cc2e1a7fa949056f5c4e4544e47185bf16b00808",
+      "bf16c361b8e9e52a2125406b2434d68c1ae6084f7d95099a3084eb504576e9f3",
+      "c2cfe5cf720befe8ccca21d0b4b1f614e41897976c682d76337f2d63f6322856",
+      "dfeaaf7e770f39ec7d31ead69f53c337be9e3ac95547d40dddcc33442209469d",
+      "e091ab25e055ddb93a3550e6b191570dc3099a2434c719985041a1146aa3359e",
+      "e47dcc12406919536a4713976ff697a109e7e4140ff5ac172dc29c856663d9f0",
+      "e5dc33d00785ef92d58032fbacd47436fc87f7c135efa9f3cadd1516adc7930c"
+    ],
+    "pending_ids": [
+      "19738ec6fd3a62b5c94d89155ed656fc692f08be20ef6e073e10fb21afe1f64d",
+      "1ccf4ec9af25ba8335bb3d2585ca7272a07eac44b5cb68eba7729c77ea1035a3",
+      "1f817dbe8c1cba9c477f83abc5a9a64de0eca460f2917d75abd334652c70a467",
+      "425e69c154865be80f63da1be674527ea6d4c563910f5ec3dae3fa524f3e0d72",
+      "452976256b8f3dfb80ea4d7ef9e967e5f0c34d18075c930dcbfa3335b7538e20",
+      "49acf31ac20398c15a26dfb919a2ac431362c65da1ed9294aa52eac526247d48",
+      "51bfc37ff40adc14c86de1e8bf68dc1c67586031e87695bad639a8736676e170",
+      "6a68b75a8875b33751626fe0117690ca68fd26b56cf85f836ff22a3d322efeb8",
+      "714ea831f936b5c18b389e1b17df883a4d003489599168733390f7f30ed6f1a8",
+      "85f73e12714e254ef33aec3e70c3f291fe3f41043a1bc902bf2902796e8bbceb",
+      "88eda3329e02aad994240a4b8d2778d88dca2e801899fcf30451e39de86df6e7",
+      "8a6f3837104ec4f9c7281f1a03869c5fc3e1c634a32387e8c19192fefad9c97f",
+      "a3586598bf40f4c91915e12b88e2962ccdf9057077ce0a3b74f19e4899fc3300",
+      "a3e079f2c3eeb05428d30240cc2e1a7fa949056f5c4e4544e47185bf16b00808",
+      "bf16c361b8e9e52a2125406b2434d68c1ae6084f7d95099a3084eb504576e9f3",
+      "c2cfe5cf720befe8ccca21d0b4b1f614e41897976c682d76337f2d63f6322856",
+      "dfeaaf7e770f39ec7d31ead69f53c337be9e3ac95547d40dddcc33442209469d",
+      "e091ab25e055ddb93a3550e6b191570dc3099a2434c719985041a1146aa3359e",
+      "e47dcc12406919536a4713976ff697a109e7e4140ff5ac172dc29c856663d9f0",
+      "e5dc33d00785ef92d58032fbacd47436fc87f7c135efa9f3cadd1516adc7930c"
+    ],
+    "cached_count": 0,
+    "omitted_count": 0,
+    "conservative_max_cost_usd": 0.127296,
+    "pricing_status": "Conservative token/output allowance; estimated usage cost, not invoice-confirmed",
+    "model": "gpt-4o-mini-2024-07-18",
+    "provider_state": "configured",
+    "total_budget": {
+      "limit_usd": 20.0,
+      "charged_or_reserved_usd": 0,
+      "remaining_usd": 20.0,
+      "scope": "All provider experiments in this database; not reset on restart"
+    }
+  },
+  "state": "partial",
+  "budget": {
+    "id": "1c377694c65b4256a9327aeacf8d6b2c",
+    "limit_usd": 0.5,
+    "charged_or_reserved_usd": 0.006864599999999999,
+    "remaining_usd": 0.4931354
+  },
+  "evaluation_state": "not_labelled; freeze a human-labelled evaluation set before tuning",
+  "created_at": "2026-10-11T15:19:29.887323+00:00"
+}

@@ -1,0 +1,2057 @@
+{
+  "schema_version": "evidence-packet/1",
+  "symbol": "BTCUSDT",
+  "origin": "2022-10-26T00:00:00+00:00",
+  "window_start": "2022-10-19T00:00:00+00:00",
+  "lookback_days": 7,
+  "policy": "strict",
+  "profile": {
+    "instrument_id": "BTCUSDT",
+    "asset_class": "crypto",
+    "venue": "Binance Spot",
+    "currency": "USDT",
+    "name": "BTC/USDT",
+    "aliases": [
+      "BTCUSDT",
+      "BTC/USDT",
+      "BTC",
+      "bitcoin"
+    ],
+    "taxonomy": "news-taxonomy/1",
+    "version": "506c5fda242f59d06187b65d95824f284a27fdb394debfe1947c52a1091bf073"
+  },
+  "article_ids": [
+    "35a6f93c2d204894d98b7d544a99d669b6887e607cb73a5d9cdaca3c5f86e8d7",
+    "4ecd4827c8818a42e0882be438b53b10e735f51d23ce196c15163ccc41a3549a"
+  ],
+  "excluded": [
+    {
+      "id": "00f64207e530573366bde0664ed5cf15cf157f12cb9650dade9b2bf31da22a7c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "013f81a1af96b397cd4da6682574193d13ddae4ba7cf92dc3f28730081461767",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "017492845b7424b2b3cfce7a523a767db5e1b57613234eb256fade37321fc332",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "01e4af83e71308d765b3dead210db3b5970c89667aaf7ab9b0b362b7e0a94644",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "01feb568ef3053cc51dd5617eb586a81f3bb7fcd4de7041fdefd7f6ee9feeb86",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "026bde78c9f0d9201e6fbf9926bec9d5517b6981b808c10dac6732f8b769821a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "02ef6fd34b3dae66626ad019a167f98b8e414a36c8c1da300d4eac5733fa5aa1",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "03ab52cb8b7ff437a5eec5e29d77d8675c8da4487e4663b166943a7ecac3fc7e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "03af7a9d7385b41a25841b050c7994d447824e68f9ab2844274ff0b00103a775",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "03b778aa2ec9282e2e45906f7b04766fea882c55a8f314218c4ee54439f8a4c8",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "0453f53919a7944adbe2015cf91f8e3c538ab423fb2e8b7367ed877754f240f2",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "048db8b535547b4a3cda03e1236c19acf7b5ee8ba03024844093361b4a10b70b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "04e92d800bb57366fef6c0d7c4bd1b153d86e043d43745c4978bb0069b07eb12",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "061800ec3ec1d8dd7188513ba9734d22506f5e21f7894adf3aed0e9f84b672fd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "0621123362b616f1b3c8a80e93aa7effd5d6d9c773ee8743e97cf99e493b3fd1",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "06be26893cfed54318a2b532b1e893d359f760863d1851fa1c365833b1c7d6e9",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "06f3cac086eda23894023c3cc41278b307942fafaf39bb795a2bf8eee77a92e2",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "07035baaa375ad92b1aa8adc33029fa686d0102eff02f4dc5b54cd826d6e3a55",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "074cf7f211e96882ab4edec307600841ee6436b2bcb5ab0a858b6cc3846a4368",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "0757b24e92beeb325daff54839f8aae9dd69a7e6f060b6e45e85f2cab08d2d52",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "07a57fe81815c0996e30772822d14c55749e9212dae2fb76c427823b47d1bce7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "07d04dab34853586fd1b1253305296a238cf8b8cc1279b023a0f7bd6837986d6",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "09ca5abc90285e03db1bc2ad0907eb7fe4ee93db01de27dfa92ca50fdab8002f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "0a4d9fc4cd2731a6ccfa30825f79ea9c8d337ec75098b167905d471e150c4ce9",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "0a6c075e07816863af0c697d632952588b26ef4c973020b4b1838d1dc53cc325",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "0aab05bb6a25c242dccc590d00f05e4f5f0e5fb20c9fdd73ab5980c53c89cd41",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "0af3808c1fb3ddf4835ca316ee31de86e17f551bb758f04f7d0a0a3a8db54eba",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "0b148d1183b762e2927d1ad1e7e3c788e89e54666af6213c0d8ddc3e065f6dc7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "0b5fd92cec3bd0ce9a644de124e65ea9daa996b2e7c30d9efae086561f7c1429",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "0bd65041596cdc0960b6b40141c4757b282279288170c51a307bd8bd5bea0621",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "0c0e8bf948b68b5a310ba32ae504b027beddaa63b090ce32cb8cacb6d065a3fb",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "0d82326cd68715dc52d3d3c64d7492166f01cc6d38e0e3e7591f0b106386208b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "0d8e22c9211202bfeb77a5afecceac240850a5b036732e11d2767791393ab6d9",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "105c8879752c13a23ed18d08ee3529188e02f22e00d759fcd0dc157a1fcebc58",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "11939e7e37c5a2cef6f1513beea553093fcbacd15789b813a0319ec3dbc62d35",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "12eaa943b6bbcd70021f5ba3950a30d0dc7244e932ba82bb9c1d3b632aace40d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "133d68a06f1cb5bae199f74677783cf43ee46e7081f9776a59969f8e3d744186",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1421e2d28bf0362b9ad16d5488c8caefe73748442ea4c43fdb876248a312e0e5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "169169aa7d4f7af403c967ce9ec25470a1c147bb7b84cf195cf4a957ddcdd511",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "16afeef133565e1ae79fc2a78ad6521b5735890d9cc2fc00f1840f7e180da542",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "16ba7652745c4018b52427847a128e6d6a2e8d9675d3be99a2a7ced5e13f5632",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "16c4dbd8206dab396508f1dbedc16cb3d7307f5dee2528518801b8a3e2ff3637",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "176c2d121f92a2fda0e9f1ed73b5a72d76ccfc7e9a0da696f4cba6a7df7ded75",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1791bc35231d276b550194cacb5d9310abf8b1d3f50fd10925efca9f8186eece",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "17a13381e2974f45171da956e06e418b9094c71f6283c6852395ffff89203757",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1817784584e4115512c745280502b8b29a1481d34958524a9b4b20ef1dd82194",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "18720cb8f0f1e76a2451c341260703d4d9a08f36b72cca0f57627f1c8dc33dee",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "188d2764989984fcfdd14edb857946bb6e1788ec70f213bfd3ce59baf5a94091",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "18dbbe4cb819ce5d075fa1a89ba19727c25aa9a28462ff56abccd8d59ee10704",
+      "reason": "outside_window"
+    },
+    {
+      "id": "18e9a41b50262a3ec5e3718898e0dd7dc7f89b382f1f0241341f0776e07f3a61",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "191011f6be2dca1819d4cea32aa89fff2eced1273c1b45d5831bb8eb43ecfa14",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "191f46e35f7babddd15240b2e9cd1b9a5c92106864161f1f4f86eb724604d47f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "19738ec6fd3a62b5c94d89155ed656fc692f08be20ef6e073e10fb21afe1f64d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1a722baffa36b69fa06e48488372401278b48dd55ab8bb6e024529ead19b1775",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1addac7c73f1d7cccc751fe7edfee7a8486d03cbea168d1e7a54ed26c21d8f97",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1b4f4102bfbb34a7c784ef7157c60b10571386e478ef2c25692ebec9452ab37e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1b941a8d74c314bd1445d981232bc6b741178308d791e9fb60074d1740d49f33",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1bc4f89d5cdb2d21f9f1c5a040a9fe0b951549ebde9f8bde791cc34aed706843",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1bf93f0afa05a04ee105261d415e86e4409b01415b3af6a0b1bbda5da8242c7d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1c05d8924e1cd9c4b62bd776354eabccc6c3d272ba6c4c551e9e243d58af5179",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1c9d3f8cf6168fa7ac715d8487f09de4e974fe47c8908711072321e1ac7c08b8",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1ccf4ec9af25ba8335bb3d2585ca7272a07eac44b5cb68eba7729c77ea1035a3",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1ce76156919ecec2f171d02a78810219e164ef4f40d855e46d539c10af0b31c4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1e933bafd0331a46a5e178be6d7a420867746552bcf283de2bee7ca7267a0604",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1ef93edc9c31f40290cf370964cb72802ad97e27061549dfc3430ba79d113c7e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1f817dbe8c1cba9c477f83abc5a9a64de0eca460f2917d75abd334652c70a467",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1fc55f32a0301c14eb83de0a3974a0f8d0e148550141766e2b9c8901704bed1e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "1fdc8845b14c53748998c13cfae21de14dcd2ddf305f7047afe00fd4d2b1d06c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2064d86e3084bd5ee06d54f64b240e1ef5db009087d8dfc744185fa33ebd2508",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "21dfe340f8b86528b20cea51b2dd6f176645afea04134f3d6a83a6e36e04ada4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "21ee60be84a051370671007575d49ce1a745aa68c6a6dc97ff3868464ea5935d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "22365a6f57310db14137d4574ba78af73499579fb090519d4dbd6dcc3274074c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "22b83dfdfdeebac31238e48ea4eadb81e51b12ac3a7be2dc599243074aaeb18a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2323eb5c5fe81491882c2010a746a4d2c4b9688a89e4d2b6ea06d50bb1ab1718",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "23c3bc43936524e65deb333cb19e11931918a9865bc79cd032cd79a470bd8da2",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "24ba4abca8a4474ace9b80bc1f0e5094597a1ec7fc06b060e2f70c49c327c5f8",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "262db883198db96b757d0994004bfd7954919f5992e42496c40d71886edbcf9f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "267b67e6ddb134a49aa51d8766ddd1d42b7eecd81e114c9ab592038da6b69105",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2705a5164642a84e6b50b55bbad13d2f84bf021c05e64a5cb23c01e99ee0b491",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "27390bb4f3d0c80e0c466dfd3b7a97d747452ffb6eee9ddfe28951df784ca7b0",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2798fbf5c4e3da95232b4fe8df38ef06e92e344530d4e7219c7c4883559831c6",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "287509e9d40fcb050eb5fbdf357089759c5ad0cd98de499a3e276f4f391b56b7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "28e6fe5e30e4f0a90eea7dac3e5f03b0130b27a8e1042ea01bf571622aefcfbf",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2975d4e20d6a3ba59c0e74c87875448b9651de7af065e074f98402caeceb528a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "29ba8539182ecc65137b670e9d321324718b0ca9634e91f60b03b36ef877c6e3",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2a96f274135ccb8e286ad80b2ae13afcb455deb63cd1e1d7da46bff036f56d38",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2b0039b93ea81aec847cff0b98e41e25584854f296c8bf02832cb2d9c6acc83a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2b4336f43be7b9ad5a8e7722468e5cd56dc8e5d80b1f7168f9eb4aa609d8ae68",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2bba74814f6bbb8d2a4272fc7155bfc098b05e7604cb401a5473ccc466bc8e25",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2cf139b6d89a71fccaffc7d70e2da778c94a4a4f5221b9101c8c6f4ad76e2c2a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2d090eb3554ec0004a8cc036a35454abe5a046b6bcd584289b94ea3e501debce",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2d0dbeaa1a67d91c3e1dfc845b2c7303ca4c452279a5cef03db314edc86162df",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2d30f67d16e71804301fe9fd354ae59e635a2def5a63eb33b863e9715f89f17b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2d5737aa3c7f370f3c619822259c96e7c2ad98321c9cc411c145a5c9ea539ba9",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2d6020d572360590436e15ba02ee7ae9cf6cd9bd53251a93a281bbb8b7771e0d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2d7cfb3a57516a8648975932a46dd7beb7cb795522d5978b26c88e493a5ab30b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2d9f841f6c3494177c1bd5dc611e82083ee06f47b61f77e186d2f96f0122ee65",
+      "reason": "outside_window"
+    },
+    {
+      "id": "2eaf4b780e6762dd4a260b1952a55aa1a23b88059b53e05212333f102c3e7cdf",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2f73844a91b3a67a0aa7c18bf771dc563ea56bda875d49eb8e7242903926ac64",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "2fb3b5e136aff70b7a0c734fd54c4ce0a57e47d78df0b78b8db63a1b44c62b37",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3157bfb2031c7b4098791558bdd7d285e5583d90a96ea14065456632d6b64aba",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3215dccf004ab649607e07264f0e002537947cb3adc9f607428db1be4f340d02",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3236e5376ebea45f839fd792249e1becaa6c6de05ca743e2e5d4049fefe9ae76",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "32e35da9cb7b45e0deb6f3f9608f89db62bcb04d260eaebc090abd11653a5cab",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "33257cf4aa70c03e09117661c40574c61309e2a98295b255f2a56e9fcf69058a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "33fa41a4a1b73e9788c1ace59283252c5c6ce1f98fe3a2269ba32612132e79bb",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3581ce0187aa29407d47792a41556283cf72d6376af07be3efc3d8dd69766479",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "35d67f75ce22bbd80a4570d8d488729bbb265ec4aaa6b7cfab3f53c9fbbeceb1",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3737fde3ec149ff94719c527bb22b42ce6d798fb8a8e174e82ca5e44f6fb0ad4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3794c120cfc540edd722f060d3bed128d75e266cfc90815bb7ca286cef7c41cf",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3823759207de493687bacd938df23c1393832af941c40275d3d381b99deeaeaf",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "382e29799ef28bd9df9be330d30a97f36d440094877c301e68887681a5b4479f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "384e516161da8defe26969d23adc0ca60d3b21294a2d2211ebc351df7adc5651",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3a06b6ff69664b94bcb2cfcdc596def012db411a444e9b45b5c719465741898f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3bd80839f17ba81b64701bd1d9108fbec2f7002d0b245f08c92426b1daa8878a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3c3985a34d7d34de00a55e354018da82c48c0105cf6d26b67ae17904aae31178",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3c6c0feba0f773eaa2a73b51ddb4a455f94a606eefba80e5c55ef34c5e8a900b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3c8709b53b13216cc0020db0bae4986961d6f338b4420af277f6ac3703811aba",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3ca1a8ed0f008607d9bbe30c1ef0b69b8af620aef06cb0f97b9c372b22d9dc4d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3d04a5f1252d915b219d863735559d720a0ae5bebfb201770bc0b3cc89a43bf7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3d31f78ce769351a0a3de762ccf6be61343c30a6ee41c9afe696a092f9c85875",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3dbe6d22e1725496a58cc255b2655edbc1403991ae9b6d340b3fcf9b635b8b09",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3dc9c83d61c95cf5a52123433224b9584bac3ff7b7c3a699f744b431db205ee7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3f61d723b720c58698c95a19457ac42b05a024e8073099866b886493341f4ed7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3f69b87af06840e8d725bfc24f212edc554b7a7addae55d3b98b18e2c0840e8f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3fa2048e9a4a22f53cdc71c6c5d699c3ab9c88d83a991a821d9a4e767d7f05f4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3fa32336a66e10eeb61080b17a15b8a50981a522ec1dddaebfff843adaa37f81",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "3fd45d49f25b372f02b8927f34f9c94481f67fc37267da3fa47eebd5a08695c4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "40067900ab9eeabee3a21d7400a89dbaa60f750a08d1c2f308eec5153a824d1f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "402b16bc562ce2fb6e905a94789511404a27c3c5673ba9b67852db117aa1c98a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "404b0becf22c7721a0cc0811fe7106ea6bf0e63276fefa660314552f079cbb6d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "422eb6a8305a73d8517208f4cb8f7776e115c07cf0280b2616ac262d5bde7cf3",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "424a64ced51f4357e4c41924f89c8b1b0abafb81a0cfa82229a970b6ecea29f8",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "425e69c154865be80f63da1be674527ea6d4c563910f5ec3dae3fa524f3e0d72",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "4298d44877fa93cd69d25517ccc674836d1f137a2268b069d498679111b7aafd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "4324c5dccca4c4cd79b9c2ef6efb006a2daf4b6d3722840ed43cddc100e388a8",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "43d9c263002f59eef55044d5c4604d1459220b15e61e618efd6f4c694eb16d92",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "43f23d5c36d6c606924fc9bb4f93c13ab743f7f82dcad407b982bc3e1fd14d7e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "44f0adc80dc89fbfc561114f7ad9b465d67468fef6324177265a64beb1ee4cfe",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "452976256b8f3dfb80ea4d7ef9e967e5f0c34d18075c930dcbfa3335b7538e20",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "46d0dd889e9e165145d3834fba14eb7e5a6035b1f23a89810a23b9ae3fc3dafa",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "46f1ed035ee81e1f8d8755e7924dda16f6e9be093b09e8de99a5321d78e5c0d9",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "47a1102dc8c5c0efc478d143d64536236c73a4b9230565b9223191bef7e3ea33",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "47a6cae05277b4d1f226f31bf310944724a44d6d55de75d385c6f1a6153d3063",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "48324dd64e57be77c25f3dfebdf6832c067dd5e3e2b748d2d93cce98606471ff",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "49acf31ac20398c15a26dfb919a2ac431362c65da1ed9294aa52eac526247d48",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "4a7f5f8ed93d7ff93dddb0b50297d2ad3f571c0837915e9f42a78b07c42b7166",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "4bdd072c6fcccb4cbe3a67b497e86d8d6d4e43a7541a6550ec61e3190b922e3a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "4e164402ab41002848c74ed4de18358467c34c20415c49040b9fb46d1cca507e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "4e19f4f20ed1e46ba8cf9e9bd15d861d9d07cb1163aa2935f4a41b5135bac50b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "4eacf4f39db156a9b9c4fc76313fd9842061c69e13df1430c78d2416e4fc9638",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "4ecad8e9f178762f2aa132166214c4b943ff62816061aca81cb5ec36093fe246",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "4f789510a6a8fa178c7e6dbeac0a03581cebe5b0fe6c1508a24c4f0705227d84",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5099f63d23f6bf672b3b47858557a01d000b47f6b6e650d675d080ffbc76b518",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "50cade1a706b60a1dd7e78fbc676b4fee3483d56eabe6f50cfc47bdb78a6f375",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5102443d87526031f3f506c46c856af6f4d5f78f3f3d0d0cca6b705d335323d6",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "51bfc37ff40adc14c86de1e8bf68dc1c67586031e87695bad639a8736676e170",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "523092d640cc790a280c9b6285c097a31eb34fe68cf972f8d09795614b2a9544",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5274408108179938216dbc92bba40a7cb41ce571bab6f35e330d50409ccf435a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "52846a42c6e973578a1ee7348b90eaac64c4e40f894457cd4dbfc6f38fdcc012",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5299b5c6955ddb6a8652c00e3e0551f536286a95032367ee940308ec70b4a7e2",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "53f49bb70590d2a61b3109f263d92b46e5682d3e26cb2b1af8a212f1b5b40a2e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5492895c5f9febb1c2158f68f3929650f2d3f91e275ab34491b44497aa06630a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5554e869034ca2049de94446ae25eea140beae8e9cb3abe86c4aa05a5332b51d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "55b327bc1325d49a96382507175aff06d6f4adac299987cf4427d86b2fa402f7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "56665b6534195dbe0153aa21dc2627c22438d9a80ee1b68a8305ae22cdc74770",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "56c2faca4f8166a17fade10dfa0cd69eea790507320effc9862cb29609af640b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "56eb264a8f2003ce3dcdc9b431ee0c0479f5f079809e235f2b34f30616ddfbcd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "573decbeaf428a1abd7008df0b9870aea7042eef971041613453165f6a649ca6",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "578cf8b99f3ad1c5bb896b8e84ffdd379bbd7a148fb5cad7683fd2e3b71550dc",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "578e296077cf027f008cfe0790f46ed9c1eb599b2ddc89ef395d6f7eb2f2c84f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "57d177dd822ee68dbe66f80d76438ed4b01aaa9ffcb8dd325568b0fe1285d3d5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "583de24a3079b3084d2278da007c8d36f3497ed66de975aa47b38b6298495916",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "59b127accf201eac6bdaa8835a70c4797fcdd18bd1b391c07007073ba59deb6e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5a0b4a2e88eba94b445b307f36959970244d75924e46379df1f3dea827c07c92",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5a39a0c66a6768cefcf7f84dc578d8be05795d27f3dd58f766bac175430973d9",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5abf8ee3042f37f3b6c410e24d3657b70b12e72f70e90a3edf5bfc4206229789",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5b20854d73f87f42a1d4f5204a7da5a5d1be887957b3ff4f670bd539ae0a9ead",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5b4c1b592aa50e92342a4b45fb1fd5f30fd82bcda2d9183b15cca82b6c6f3299",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5bc56c7c7038a4e699059591a97a4eb6ecdcb1e12adc4eba4f9bcc3f38e58495",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5be5b099d74fccc6af422f1807c4598cee9565f11caa562a6b2b5c383eab6b2d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5c49ee2ed72d2b3a0542be1c1c37644bd1b7adce6080b05798adde54dd439a53",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5d3b9e786ccba7163d6b7a260e7b5efc84e6aec81f003a85ccd927c304b19cfe",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5de47e7c42c5c6e0bd44e091e4d1b71b600a24b6374619ea3bc886915c357d6e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5f414b8704e8a88468eb5c50690900b098916e03aba290021fbb72add7267272",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5f9a85369792c1e5575e3094bb57807eb5ac06211a41c42def390665d315d3dc",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "5fc580d1e46e3d6a48c97432552c6b729e46305071d7b32ec62e17d24ee93f93",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "606c351d750240871be332027348cac83819684e8f749e2b73a2e5c4728270fc",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "608564492c3cbc9e21a0ac3096e75125b088797e73279b06c2530744f290f119",
+      "reason": "outside_window"
+    },
+    {
+      "id": "60bd8fb700fe03bd43cc951bca312ab8286aebb27dd5fe1f832e021be2476b91",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "61ce94ff21b3aaa16cf0e1fd6292ae2a9410f2df27a69545eebc799101b5dfa5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "61e76b55b8785be99c62c1a6c5e0eae2d8522084ed942eb5fa3180c79d83ad29",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "626d5e236921828edb6b51843b6c1156099f5a47e0ce4bbf3930338cfc1cb8e8",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "64f9b3940a4cbc2383ac01d539824296c0c640fc2d5031f91cca078defca3e8a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "661c24015ece1fb681060b9995100434542138e48ffc873ec1fb772113cad77e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "666ef02a46fa16b0016fe4d0c4ce78f07bbfb2531b716e00c946aad8d549836c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "66f5519c1672be435d52df4d9c564e1664d5f901e38914211797e95711fff131",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "67d7bf118f28d9292d45c00f22ca4b45f8024c0d0351789cbc44909eda5f6229",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "67e5c19f25bd40cd678865b91f0d2d6c9c98f2bba927bd7d586e661586cc0705",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "689a9197cf63dba5585fd2ee02a7a56d96d78fbf7f678c52284fde09ccbe335f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "69a64e89f6634cd6cc86ee6392c083ab74e756a4293d321871e607cc94ac1607",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6a0a39167e139d925a715d1a18d442852bd06207c1ab68adbb1ed20dede85ade",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6a68b75a8875b33751626fe0117690ca68fd26b56cf85f836ff22a3d322efeb8",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6aa5f3f7e27c989ce0ba86dab915e13c84752e4fe725c6a203e6488ed2da4e18",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6ad71decf4b2fc9a8bb389ee806e23c649f187931e14fffde430a5fad58b95fb",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6b450f0b963145e8263f5e19552933d03b0773f1545fcba53674e47f2b96733f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6b5f8d46f4948be57dedb3582c75c730ef33704641464cbd15c035e53913551e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6b9725e200e9fb98ec1852d333dfc8788ec538c502794c194ff30b30cef493c5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6bfaf3a894d9081a606aa9cb5cb0773fec3e4e8a74fd0b136379f7ebf618094b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6bfe8fe48dfaaf3cb87203f90db8affb49a0766a368b1d840623dfc410c1a90e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6c21a48774fbf89dddf526523c103be5716925fb8db65e9d2d3b0847ace959c1",
+      "reason": "outside_window"
+    },
+    {
+      "id": "6d1f54d8112caa85783fbbbf1da284ed0622aee8b2745ef01af79ff087fd5036",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6e164a7197274852ec085e06a113f01c302af9944b21296cd98537269719bc10",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6e303f10f03804780479deaedca39ccba7ad2022bfd635f213cc6297d7da33e9",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6f258979f2fd9050e0fb2b3b3afd2a10fa92a32bdfce55ec07badee51fdf69c6",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "6f5a9a09cc780923adb99c9c5003f1eb6a8c4a53b50e6964f4ec26de0f026dc8",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7089bd841659a04273abeb8a5f948df10f474c0a99b34f8c2c81ae26634d2569",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "70e772f85df027d86156aedb23cf8a1fbf344e11385a0883633b98c93cee3cdc",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "714ea831f936b5c18b389e1b17df883a4d003489599168733390f7f30ed6f1a8",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "71773ad9b767ba07eb927231500dbabc46736b441f43485ddd04bf73cee11a79",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "721c4bbfd3748e6b2c7d41a67e6fc71a09e02aa73d3283e32d449c46cb7a1444",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "722483a8273ae78a935cf194bbf9aeb4b8c296d65a981b149a0a27ef0c1f1ecd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "726d876fb233ddca2c1be71d1832db3bdb682dcecb69de922b033c968012fe61",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "72be810e9444afecd9ff9ff3fc1efd35837904638d93313f5c49c00d526c1994",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "73a69dd3ae4606d7f544210d3ac51d60b6a34a8f8b468c582db9cfa4b0e88af4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "764f1694ea7d846eeb50effba03ccf8da11fe9077b9e9cc8b04ae7d90937bc58",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7679305cc7b1fe50d67fd72dc7bcf71765d6bd3f9c33a5598ec532208cadf3bf",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "76ce6540479cf8596585c20dc39a5b2d63009c6073d6a26a8966dffc04245b99",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "77518c46beeb27ed7c52d2bcc37ae89e1351c98f06eefbec8c773b0f07242b57",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "77b36b38ff6976ad3b42bc719cfdd8df9def8d6ac42fb46ac57accb5f48e774e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "783ce78b7f82a720d2aa4eb19caf6e1cba5132259fdf1006b2cc46f0a22ef362",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "786972fdaba7186ecbf3ea89fa6f6198888c6af11bf000101f82e0bb484e7f66",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "78e9d4aa7a71e925150f72683751386bdd02081ed82ecda7df0b3bac1b0ca45a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "798d501efc14554a602de71ddd401b476fa9963573f955edbf0ae873a7313098",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7a23bd0f64e0052ca03d0bdfa7082808d31b2fce1f846878dc30cee1b18394d4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7c4a5a23b169aa92fb54975e32b32c7edf1c5dae60fa9b884037320a92f321dd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7caf5cd2e4a1f6ca26b1a719e3809ed2e58c668c72ce4ea858f96ff6fec4696c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7cf12735d6b18654e54cb2bf899a8429f4ad4e0d7b9d1ca585cde486ae8dacf0",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7cf734ae06455eaa71fc752e1aabfac783ca9853e9b050f0fd2ceaa62f05d5a8",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7d20d17582983f1f3e9ea218b56b775eeae35bb1789788da89f78f58f497f5e4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7d72fb33af2e6e9e1e19cd05977ff847f0857527c42038f6325bae94c68ccd7c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7d7ae328fe53fafe8da874c8a936bf9e0f7cdcf6a79328737f92f5a235820122",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7da4d1267392d6623f8214c5ba12cfc5a8744a71655f3286ff64881b91a96036",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7ddddc3b7d847c00cbc86767c2ed8c0e4067610663f4bdfa527cc9e964d4bd74",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7e27fce76fd2e519f81295c6c280131f9313b777801914cdf231d35aefcfcab5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7f1922de63c9f3ccf5a4a3766d3fad9ed111548c67361c2737b4fc29c29cc0fd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "7fcd6fef0d376767308d2cbe3379944dacc7ab40428b101c5b4f19aa215f50cd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "80376102f10fce7e58852de6129382c4d058bcc962411e1b13851366d531d806",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "80807f44e45a99801bb253fa5b248a701d4bf59f802ee3ea267926cd1d46993d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "809e3b8827d73affa6c08d66b027e90db30e5f0172f3f313960ccb950b984e19",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "80d6006cdc112a6e72c7a9a2412214f7561b8d7016084e19b0e00163fa95bc80",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "81a0b553dd99877f4191892e9b660d44dc6bcace387288154ebaa4ed076ae3fd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "81a3acc16cd583f3b25330fbcc269d89d3274797ae8ebbe56d60d34b748883da",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8348ca827431814760ce42ca157dfc0c8c2143034d38238712e06a4f78ddbcd4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "83d38f1888fbe1b33ad8ebb400e9426709ddbb2804096c4f3b40fac834d61378",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "83d6f395ee9e36f0089544f529779b968ae2cfe89797fd4eca2490f686f7ca99",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8404f1c5654cc2b5fa568de902b26e86f17ec8a1bb934e6156d23c76e6481242",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "845d99734dec473aed7ebb180babf83e1cc2d0690bc173c73c33262e031326f3",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "84c87394530c6efc0c0ec9d373086012506190b80307e0b99b1638b5437a6a45",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8512e88fc221f0add7bd6848477aa96e847a2ff42d9d2785b504bf2e5e917809",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "85330a5edc236a488f24934bd47c9f2ca6f4615da5ac52ca8682d5f4074af0c5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "854ee8e2a5b0b649d4fc336412889258af1b01ea7b0a14bd7579da9d05dcf348",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "857888318515316d2cc8d7b44f0c5ffd4b4c8ed02bcdb5ad7527cde5b8faf5f6",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "85a455cfe249cca0fff3583f49afb77bbda787f647d5ecdf0e7341246533aaec",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "85e8c9eb8a570219e7a873fe92ade0bdf6989d80a5f2ae09507939f81306b355",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "85f73e12714e254ef33aec3e70c3f291fe3f41043a1bc902bf2902796e8bbceb",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8694d5780869eb95c6cc754b96c21acf2ab8d28741467806ca82e2986e25f086",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "86dec2d47750ddb31ed5f2f1e38edc443a80f8a1dfa92d0afc7a8ebddcee9b5a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8703402acb35876ec601102eeab55f2dc9b9dd83b3807d365c8247915a020be3",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "87246c3b582ce9ae0d8e510bc812ec8007ad828737b459a4ff24fe2c68fe0634",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8768dbed5254ffa2ea0107058df1d8bc1ee06027b5a1d91e629dea97284d66f7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "88621c0f73f0fd064cd239aad383bfb2fa112203f4edf4316d171b0df555e17a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "88e049bfcb9b8bd8d725caea6fff3842f255263f698087f4c0107a0dc8fb1df9",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "88eda3329e02aad994240a4b8d2778d88dca2e801899fcf30451e39de86df6e7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "895293b299b5b6ace36579c76c3f2734d1c7cfd6249e025cc94521fc14f7daba",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "895b8c09d37c6d75774d18e884025ad8f7a3227e973fb59acfc0589747a63be0",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8a6f3837104ec4f9c7281f1a03869c5fc3e1c634a32387e8c19192fefad9c97f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8a7a256ce369c372d28954e6b36f8065d932f352f7c456cce93f9afefaafce52",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8c3cc2128af7ccf71aaa1a63d196cced64adc952e08c3539e03fdabf8d1d62f5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8c543292695cd3102a68de1dc2d463e468cf121a65e1c13ce63c9c8b7a65f48f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8c740fa0263616dfc345605bba453502640b65541c1a4cc325c9789002d2f7f6",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8c818f119e92a09e35bd14ec3a533b6486b44197c4e05c1ae8715856bdd2591b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8db2ac64fc1288001414faefc04578c7f35f5f2e622268b9b199f81dbccc31b0",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8e1b7a699cdd5de712a30b58ad21f528be8b0d43193d5ff0145b16586df5b481",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8edc1a5ddb91a49694115c7a95206c0ea021b83afdab532d3c8e75443fa31373",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "8f946d2a173e5533a8f159c27ad53f845bc3c145916be8418a19bf159059a10c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "90004b7b3beae08c31be70e738e3f4134c96added84192dc1560e2132562c677",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "9059d8a73bc77a8b2bb2c3e5d448073f2f1b3dbcd1bfa9e531d11c0e3b9b27eb",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "90d48d4a694fffc7db2d57ef90e6fdc9a019847a3e153dc2074d52f345d329e0",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "90ff27931cfdd7de9ef221a38885323aea497fb26dec8edf703d43e2f623e9ce",
+      "reason": "outside_window"
+    },
+    {
+      "id": "9159a32cab0f18588e1838aecc6bdc1e5e6b94df9e1c2f7a9335a81faf83221d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "917c49fa766039553620a785088148c0a7362cf463872db2e884c42288afad4e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "9396dc8d4590a0635058b42baf9c96b1feaeb4863b90c7f838a618f28453ff77",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "94c2bbd6f588f17dcd6758298083fb1e6c1357192086d7c97c4526d695fbfd22",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "94fe4272421ae4dd8cf196aeb12eebbb44a2cd658fce08423a1271cb690f609b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "953a0689af2ab0455082ed6d4fb17bc2df98f348cab6f17dc05abf602ebef400",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "95b0c3f3a4325507cd5043573a4710e8e7ad0de284f15f7a273a7f278075c080",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "968cc167c0a9ed08fa7d0f248ce2485ccb80e4a5945bc8d8f574c0d056f32965",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "9733f1a1316625cf6c5c4e425e72f68c38efde9923336eef29c4ae199f8fbe6c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "978275069782b24b749d4101a43be4d432add24f350b5fe3bfb9ecda8bc2c70e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "9913811d1e1520c6fb622a42837ad14e50ff358b401862b4aee071b028aa468b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "9981e3a6c41d379becff23db2f1e191d72e477ff579c137338a72deea779c241",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "99b20f66ae476d904569eb68c968a8a1d8a548a4bdae9b91fd939524ccadc633",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "9a6314e13bc33533d5d873af8f92636f90b3759e08a85b59a0ccb0acfd17da01",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "9acf03ecc99d9fe7cd240da6e123e482ffdfc8c3bcf310b6c69f95d4763a0752",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "9b71d5658b367e9602f44b96a8d5063f61e2ef0e361d7b53e4ae0dde6912cabc",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "9bc29dea3019c1c06f5a472e1c9be3402ff21555ce89802cd6280d6a7819feee",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "9e0aec6e6b305bea9e28f0bf989e1f82dcaf1e82aabab889860bd49003b94886",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "9e51a35901c83bb9a14de0e8f15e3a7371eddd209fff2115dc3056a8ef61a377",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a00b5fe0ab03d0b11b10091b27faf4df2fded831936be312b215b3c30e44baf5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a15b52879b466f7ca0e3229595af4c011f74574eca6cae6b84fbcb7853679de6",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a1bcd4f81a26dea2453ce0b3b874bd7b7744964d59635cc2011d59ddf746b800",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a212474510fd8fc023019f215badec4c68ad238b17e3a4d9fe57ed5c1528ac9e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a230cecd141d97e36f565bbaea69701afbec2f048745b307cba17aa333f11007",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a3481b100a4966bc9ae6dfd2fe96e4521184c022dfc29d8b6d0099b7c5b8abac",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a3496b95c27412fa9a9da2038eb0b695adf0d83472659d583a85987eb9c7f777",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a3586598bf40f4c91915e12b88e2962ccdf9057077ce0a3b74f19e4899fc3300",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a3e079f2c3eeb05428d30240cc2e1a7fa949056f5c4e4544e47185bf16b00808",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a4b56ab72cd92b83fc018f8dbfeba211c630a37153811273261ef4d4e48e4fbc",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a4ba1d21908133619c893271a17cfd103e4157b7708ba7fd32f1ba0401ef8103",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a4c831e7d875740c7dad594561938b75c36e5d24ce56011758c24a58569b19c8",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a4e226ceca6870f0491e32e8a7c98ccd47469ca78c520eb19152d3f5b1ee996c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a5ba995daae0d99b39f92be896fdb44b0181cf79e1d54e0506a4148d83a67551",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a5ddc6ad5e398498b96d9893a006359406e385fa8fd8a8765353be67d41852c4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a61f93cc62847e1d6b0113f6c98232315ac8826f15d1b63370fe0446402155c3",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a69b72dd306ab5ddf41886ca6d1d83e552903a8e70fb157511a7c5e31ed34463",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a755be27ad2ae7945fd09c941f27c4e8c852d1be96bfa6e9aa510b2ece74ce95",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a7c1772ab0675ff6eef992577c38a81c026a75d1f7dd185f64c2c775cd2bd01f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a873c1b15e4f2c766b993171d129bf853887827483850da1c38a0a3391abe791",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a8d9061d0a81f5e5bcc1a8d5a97a7f5707e1e7c453b1874d4ee4a8a3453289fe",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "a9f7a501b4ba2c87db64129781bb8b1d432edba0c2b50bd3012ad4422477c9df",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "aa673d0a3c8b6bff17a3fbb5923fcef6ec51d71a2d2396e3204a2cb317b9cd66",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "aaa272b243e8370ed8d1515902375dec68e88537fefb35e0b826a9ea192af29e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ab17728e1cce02018209106369b7468e51970c44f7439215caad0f722707ddfd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ab7aabfb473976c2b3ee7f4ca70df0436d8e0e732df423a9f35536f49132827c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ab8028121d52e0d6bb7df9885b1d5ef1dd7cd59960b1380579256852276a3d48",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ac28c3791b9f1e0acb7fbef2c27e61e506f6f5964ed7c0a4d29925c875c5b3dd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ac43aeac927ba602137a283525efd6dd6f4dfd7f43d0f46e7c9e6476cc62bad1",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "acb05276d507c6595033ab1188d6408e29700b7b115411522fe58bf834e84101",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ad112f9a2303ffb93d5ee27fc0195a5c1ace58149af21c733634a5c2231d0583",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ad74ef0386434d2ef91dbc34277e0464d0718643ad1be08124ba2913d070dba7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ad91daaaa5b274062c1ce9f8bd23265602866049fb64a536033e511d04fa8b2b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "adeb82d47ae512a9e824a9eb756a5f2c0c613478e8feebe7fe1839ee0114a6a0",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b1686700dad23fe0fdc16f951780976d24cfafcbdaf30c6a6fb508eb51d58ed9",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b193cc65aa74865aec925bf6a17361a6f07f81b5b035554dd8bebc6010fd0d59",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b1b1a16a5d28f5b69ef2021fde95b6b775d748874f07c72e9e292bfe1d5332e4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b21fcb70222418c494404210d4d2806586b19f4f33f6fcef14f78ae1703328bb",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b23a445e794d0fd88bf119a1fcbb20e908ef0426bb4fd0d75d82e9be083ce6cf",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b2aa23f728941e7670b505f196cb1a4f98588d77ec07e725e660f56d70ef7633",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b2d46a5f124923034844b68a1892eb270fc0cb88a4b1ed1ab6129724fc596cb7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b2fd140209993295217f4745617d9427bd145ba9b0dded9514cc1dea445dfd92",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b31593843c426658ecbcf5a0b457579eb1e7cc413bd6e91e98f79d1728ec19bd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b43d13a022c65858f80553b42e2c75309a347a192b1feb84e52fdd737aec2ae3",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b43f22d20139c1b29eb8d61dc9652070fc6b63a7b501fb86f3c6e0b8172bbf56",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b674552f208b266fba599d7d66fef7a51e255932c096afb61f4504e6625f7920",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b6b2419da50789b364e93fbe77a8dbc6f12efcb589e4868a3ed41420c258a670",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b6e82028dd32047269a7492aa4f7e7f04b93343f17a9fefff0cb5f4376c28ef5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b6f4e24ed05d1bfa4475d5433f202de8dc0f587ec691aa23b57de8db2d5bea8b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b70bd5ba8760e991ad94cc14cb98676bae21470316fb6fffdadb0cc594fd830b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b7135fd5bf61f29e87e613bfdca3785037d28016e3d93046b87a5506fa2cf032",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b7b6645c8515d5fa4244c14b1b2830314770d54d31a18104c6eb9db50fe9e5e5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b847018e816111971b86825d062fc3191ef7a7c1371623edbdceffffdef1e2dd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b882301c4f18f1c85b323b1fc15666af51a59fd900be8035107499fb6d38ab5a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b8e41012736e99a34c249ee978d620f77176e6c04f6fab8b734d5d18e6bbcc33",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b94bd81e71d7ae3c65d43a1d676ce90c7985e322b838ad9f186499b4c8a23c83",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b9a609398f5ecae8b39ed58020a0ccca0d50d56939c46e09183043b12d1f30a0",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b9de9590b93c09c782efa18597ea42ea6126d5209621f21d159bf3c29e573c23",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "b9f7dd48eef07f854444e816a8a6dcc0f1350926108be68255cae610cb23891b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ba5f227e969f8142d2910e5fc7e0d35636e3292684518db19925f4b860c8e93c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ba9c5ab47cd610d393e70c21041488a27b052264f795814c10f5444901c108e1",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "bb2784e7412369c671e21495232785ba0039888558173a276651615268f0fdcc",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "bbdc49a68be21bdbcac12989d60db69af6fdada6c2720f01cf1edff62e63b0b0",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "bd946ee7b3163fce77ae5a58018684148f154881776b23c4e225f622e8d986a5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "bda95ed05e760581bb77a870000442e012cf7b2516bff99144bed7929a9e8d04",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "bdff0940e3f97da3050d717bf6a3fecfe5334adf3602aff64e02124beb539e31",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "be8418bce716ce0fba921ce1888ee991b06d3b42f2aa9f19e7aab0e38fc102f5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "bf16c361b8e9e52a2125406b2434d68c1ae6084f7d95099a3084eb504576e9f3",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "bf56517c4bac2e35ee8b14901d53ac924b857f347cb33bc76a46e0d5a056320f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c052db0697c1a5db07be08217579426c6729034b51115d09a76616cd71b66e4d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c0bc8e19992b86ea250c9b7210b41d52247e894a7efc1c282cdc1c82300ecb5a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c0be39130774a01965c5a22a658ca98db8b86501595a74512c08633875baf7d5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c1bc207952afa8372549c620af4228052c98b187fa8056ef2a0ade7ecdeddf4f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c1cdc5b04946228c5b1b585f274f53f034fada35aecaf45d7a9616559b1b4fe6",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c249bc5effb8a82a99d15486d3b281889692e8cafb98aec105b9e2b689fcd57c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c2cfe5cf720befe8ccca21d0b4b1f614e41897976c682d76337f2d63f6322856",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c3209c4033a357ff0872968fc6c6ef372f370a8e20a8fddb132f336e8e69f130",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c37b0e4371f42312209fe67e1239f7876cfd69ef2df1568f3d5325183de7993f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c3ead5d4139531c914b63ce76742de4bee91bd93acfefa02647f1d1b359cefb5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c4bcfa2c81743d0506e2309e493ca27cc92bb6573d04a941f2e01c2715f13bdf",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c585648bbe3a09e62c4925208cf4c597fcff081c8499b930142134ade39391bb",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c59232455dc68e6f9f6a1963e3e55f6eaa8a6fe383ca9fbabbe59e7050f85407",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c5afe34f02bb8605bb08d5e2fd544e8ea387620fe0e2d0a3e62afb632f7b352d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c607d55a60401880abff9f97aebf68fc7208568109e0baa0ae488145454c8c73",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c6e8c2a15578f18c551d563630988e9ea2dc1e9895c8a95505f9c2bfb4411fc2",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c728ddb51e5bd74aed949178475eff7a6b0961077960a2085bc93c07d7e80f71",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c77e2d1a3839ca9ff9bcf3ab0442f1408163f9330f3b9d89de223ab67e6dadc1",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c7807e87a68ec6ac855fd26fc702eaba38481fb965b6749af4bdf4a35fd07c2f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c797dc6cf58a311c09ffb1e5df813ca0b15a09c531013f98350d976664b39963",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c7bacdd8ed808396411daa5d8f2ce16e71401007ccb80bf7ade0427b924e1367",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "c8f6f47be6ae84b7dc75dbcef3bd589c0af1d6386c9c2e75d8cd8f2c2f14fbf1",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "cab32cfc008a6fdac52b5866018b2da31b4b6288c3dfbc8cf46af5029ec59b7b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "cd6020a797d2377aba6971276dfe2c11df96e50f2e4aca2f158f0532fe4cd9d8",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "cedf45f57c19fb806998956afaedac923df77f73009c1a199d989f11a36fbeb7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "cf38f4bf27e6db9081c27966c9044256ced42ec5807f85118c4028a5b6897ed4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "cfb3e36df524eaca95b6a88e5fa206df678301edfd351448035d370e903262e2",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "cfe87b0449a58dd04d5fab8781b582ac6ee08024c93416751cdcc693cdaec93b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "cfea7c7158c015f8b9323575d7965290c2450d6db133a1019637ae9d173c77dd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d0774c03381756329092686100756d4e9f428ebccd1bddbbedc78d4393a6d186",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d167722a8b35eccbaea1d374b8d8bec0805af4baeb9c342b281614881d1cbe17",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d1712d2a1283d039e86b261e71d28226aca89645c979a35d20f90c1ba96c3de9",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d264c3e7c86d7816b671c0f016e92848fb66856a99052f806233ab7af6fdc772",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d2ee2f841a2630d9e2ba2515939c185ba38e2ade488ea0cb9feebfba617deb35",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d30c7a2bdda32585942fad72eafd87e3aa46457882a678a1c2cb3bb52490541c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d329044b74b386d48d9452637c7698f7e8f20614c809f47e41948ff33011e13b",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d4613b670fb3b34e5f1272c75dec22861ff19552261eaeb26596a289259d37af",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d4aae36df32f2aa5707eb9d81c969d63b7b57aedddd40a90e402cf62d7cb074d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d569942f4f43be760db63f1192821e38719c981184dfe2e8a8bbf0ac45a39fcc",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d5a0153e811b11806fd1322f0870a2d6b44280a2cf66c0b8d238bfb20f2cac6c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d5d85ac686badc0f815be35cb73c0fe9c10d9a4230d183065a507684e9b28803",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d63548ee5f17a0fc8e548376274b4a2a7900557ca5ea19694e0653cb99a4a1ae",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d636f11075a94cdbfe6345364c74ef484e729484d4832357cb3f3610264a8227",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d68c4f9d9909def5e02dbdb732c450f0378d90a9526ca1ce1b5284b859318d65",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d68c7347c46fa5997ff3138dd22ce0038945cece1f4cc31851b43da3417fd5d7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d6bc62566995145541b410d7be5370fd21725f1a381920b034220378eaf71794",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d6dd2d72dccae598c0b775020902dbc1af4866471ad9b18cd3c6cfcbf2712555",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d7d28a96820c4251c94d38fbf658b4386b57adf9d6f4a7c221ba436206770b0f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d82e4cf3f89620a7c6e57de527543845e43aee70a32acea471c868eb8585c6aa",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d83b73958acc3f17dde82711f0e5b31672f7183307f85fd01aef7f56b9fe63fa",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d8a8877a2c908cccbce63d8ff38dbf13c8a6cc40ad2cfb674bc59c3846f4d2ce",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d952dab4357ba7d4191e8bb457f6948bd37369f26ca5997f4cf15b6e0dcb8869",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "d98678ff77d58397d62f5b4d086aa7ebbf2344bc7dbe0195676b8b85a113eca7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "db45a7fef734071b126779694d0f4892005927fc4ca5b42e6930ecbebd7bf7cd",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "dc03eaa8627a653c52686a615831738a466609f12841932bf92fac79e14fb755",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "dc1274ea1ea398d2ea490de2ba0afab3cd306867ddcec289a2198506196c3288",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "dda19daa4e7b8cd2e9080144148c491d0b36cd617277238b5fa3755f15deccc0",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ddb315415b70264ee908f46f8772da60c63480f0f37ee0121b8042805a85a888",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ddc190bc76479c134c44836797ff4a3f576eeb0dae1925ee8c8dfbbde5a7aed7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "de9951d9681d0392e18dcf6df8241742124c9d498ef0f320ffe0f70fdeadd0d3",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "dec6fc7710e80bd3c6d97660899c3bd3898a6e5bbd6f17ace2ba2aab730803b0",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "defdcd1187328a73bbd2f5b65b498e4c98f2833a45a8c067f1913c452ca6bdbe",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "dfeaaf7e770f39ec7d31ead69f53c337be9e3ac95547d40dddcc33442209469d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e0353c787e9ed37c8d22e55a8783c311c3ee1450aacf7edcc35cdfbc45a4cc1f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e04db01d75ce69c12daeeb024e7a74462d52e0167b64c3bba86d6b06f556ba6d",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e091ab25e055ddb93a3550e6b191570dc3099a2434c719985041a1146aa3359e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e106bde05dad0e9ccf22b9874b80e4830550dd8323caa45d194a25ecfc173d07",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e10dedd4094a51c530018efab09ff48f86693d6f28b8643912907870143c085d",
+      "reason": "outside_window"
+    },
+    {
+      "id": "e1f730834b708b96d200bbbf14831140c9bfcd0b3fee387a35e3c34bb0a21246",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e20eeaf4a051211f15a83db3666fd9fd44499775370ff76fdb7321740adbf6b6",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e2619e2f25b58b81ed666096cf9aabe360c3bc31ea8a615e6257789f25474ce5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e2d452d6a0615cae57da2a753dff4566b947420b1a77690dfee0b76367709d95",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e3038ae9bc48821b306e1052a9b7c795dbb646a322f0abff41646232e64eac26",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e36c7b53e055be10d0f76d162b4aed9be1550dff6e3804a5f4a909f1529c457f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e372401ca287ad5d42ddfa4b73d643d64ab754fefbe4e59033803d05aabd0623",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e3e9961271485acb153868a1d4c5e33fa700a2c273a6a67d9b03b8e4cfe3ac64",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e47dcc12406919536a4713976ff697a109e7e4140ff5ac172dc29c856663d9f0",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e5047bea531734effdbabe300958a2c42d76fcd9772487a3897bed510fab3960",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e5208cfabd7829fbf3725455d4bb26c4d5aa6b49a8e43b0b972a70bd04a70d71",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e5bb2894dddc9dac0c579069603e3c2d8205c790b312263dbc24b5651ec14544",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e5dc33d00785ef92d58032fbacd47436fc87f7c135efa9f3cadd1516adc7930c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e65968a087c732a22907f29a6bb2b0e3f9fb982706feb02dd059598bf027f69a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e73c384c8c2d704ad0b606550bf3d0a6a81411b75285b394e0644cca331247fc",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e73ddc68057b74cbcb28596b0077d4b26b0afc3d2d2597ed07aa0141ef73e2b6",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e7682e95575560b31d0d26ddbc262ec9d1e68bc80fbb5c47694ac4c052edd821",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e7c7cd180a8bbbeb278e3767ed533d4750a9e27d00d8b37ad664c93a53e1d5f5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e96e3b3872fa756cff56e4f2473ec96ead8effd9ed7cd6d144bdb9feffdcd794",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "e9f8f139cff97059607b784931d55346ae0bbc64af868e4e68873a6931fd6449",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "eb0eaee050f27cb73627835a38c8db787122cbfcdd25bbc87a350405c124d6cc",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "eb0f7dbbeaea54db7f9f5ecfdb5cfe44cc5fbaa33d76ad78dd1f40d08dd45db5",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "eb21a9bfee162d37f6677ebb1a39c6b2e4510dad927fcbc94fc8e1e9ba098999",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "eb8820c66a6c4f1b4ad7edbd605eb9a00d9e9f17b96ed0c1a3a93937ffcbba19",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ebfca5bce59393901fb9acc9307251cdbdc90a574077d3345095a4b8c60392c9",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ec8f001c57518d22e9a8f7595e835b432206c4e22dacaebb80b8cac1fa0ea7ce",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "edca02cb6066cb7b10b0ffe550ce854b1e3fbe07e201b66eef22db86d2406171",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ee111b1b5b3f3a39cc50c69fcd488b5605d8e5e96b5edaab07be7502120bc7a1",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "eff059b039ac893592662b5fda5d130e3c6436783ec21c1d6babee120057368a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f004ac82243e0417651ee941238405160668344e5c76c81d34135e58cdbec6de",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f038c8ed984e83e83b261d09c5aef2b95afb39cd2c88babec57eee0ba76ed4b4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f20e1b3afd0d38a5311158628482d35b4d5118c2b7e6d5dc65e5b634400f29cc",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f26fb32302d7c3e16c15035f8c05c0ac529035a4e087657810c616b7c9831a53",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f2b13d4ace868e9e88e85c74a64cc560065695a6a728e99c8425c7128a12b408",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f3b52fa79c8197255f205b595e723d59594414278cac49a614beaffcfdf72349",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f3f0dcbc4fd63a616dd3730a5dc6aefc6be8547a598d158ee4d1509d03bfbf95",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f4abfb5c196ea034db80499e821069841dd932689146423e9027a96e60a3eaca",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f4dec2a6ddaa8412ca001d18112e8b535b81011961267e98b617b1481c5b9410",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f54c084357cacd8cf73d527a9ae69dfcd59e12985928c2ccfc0de66b8537d34c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f61132ac318aa25125a77250bbf4ebd293180de6f5a182b87b57ee2bceb3e4ef",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f6df0f87c15033f90bebfce3f8bf1b70d99ea0dff4023e114dff383f27921c1c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f7c1b6a3cf725e9173368221cd10dd5d2744a2b33507dfb994574e7ad2c141e8",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f7d3c614489653da5406df8ca46c4b7c53ecd01830b6df3ce7aabca2bc334df7",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f7e92a3abf51acf838754d6024d464636a1476e2d67b3a7f05e5c27760f924fb",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f98075a7a37319b7223f05aba1116c0704d6d808c8f0b8e0a26318e52e76aa2a",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f981cccab0768d5fd650fbdaf043d5df9f7133a3dd2cc46a7dbdce7c02d0651c",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "f9f25c0cf8749ca2ac17382150933f8946a72bcfb5089c7b936a182d285082b1",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "fb4598ee5b5cdf9484a900ceaa638d60374d604e5854ffe0ec69134659ff019e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "fb4f565764e9cd5feb6035f1c624c3aec596537fa8901a021befad2f0e283abf",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "fc439a63c913bb9ee23eff826f07866c5a3ac93f4ef788d667ff9e910b4b8eb4",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "fc977dad218e2c652512b9be63826eafec8ce64082ccef34dd7d81a1aae27fba",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "fccf3d3fbffb912f166f12b1048444a006dfacd3ecf7ad67463d85574e5ae902",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "fcef2ab71d90b8c113c097f10294715feeff8839cfbdfdefa238e884bf713796",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "fdd56849acfe630576cf60773e21d0960bbf23d126af5179a37fc211e1626baf",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "fe83e299c18db588735de5951cb3971370744b2f130ce685edec9bc21e331b8e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "fee78e9be969217e257f6a979485e5d82a290e85b1c749f81a3ad1ab5b65fa9e",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "fef3ff69d9517ee02634d4f2e192fc0d4471505c885444d570b45948d154ddeb",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ff2413ad2dd359d681ae38d1fded5d8c51c1b3ee33c093e023f1152eb04d171f",
+      "reason": "available_after_origin"
+    },
+    {
+      "id": "ff6593c01b734468bf62aaa04ab6610e3d9867082df2d191f49188d893308491",
+      "reason": "available_after_origin"
+    }
+  ],
+  "coverage_state": "articles_observed",
+  "limitations": [
+    "Source continuity is not established; an empty packet is not proof of no relevant news",
+    "Provider attestations need source audit",
+    "Historical AI extraction can contain model memorization"
+  ],
+  "id": "ddc003a44246d6f67fd55e937dc412142895e1f005eba12bb2c6f3beb5386117",
+  "created_at": "2026-10-11T15:20:08.052671+00:00"
+}

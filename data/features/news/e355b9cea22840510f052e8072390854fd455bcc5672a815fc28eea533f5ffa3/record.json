@@ -1,0 +1,112 @@
+{
+  "schema_version": "news-features/2",
+  "packet_id": "ceebba44bb4cdd5c648bb9bb0fa3a4fb2f762bdf9dfa8aea2e315851d7b132b7",
+  "symbol": "BTCUSDT",
+  "origin": "2022-11-17T00:00:00+00:00",
+  "classifier": "keywords",
+  "classifier_identity": "5eeffe7fb33dc2a99fedab21687d8eccf0da4eb070e4680644d9e0fa8a334fba",
+  "names": [
+    "event_count",
+    "coverage_observed",
+    "missing_classification_fraction",
+    "positive",
+    "negative",
+    "mixed",
+    "unknown_framing",
+    "regulatory",
+    "macro",
+    "security",
+    "market_infrastructure",
+    "flows_adoption",
+    "corporate",
+    "supply_network",
+    "other",
+    "unknown",
+    "announcement",
+    "realised",
+    "commentary",
+    "unverified",
+    "unknown_event_status",
+    "novelty_unknown"
+  ],
+  "values": [
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "classification_ids": [],
+  "missing_article_ids": [
+    "6e303f10f03804780479deaedca39ccba7ad2022bfd635f213cc6297d7da33e9",
+    "76ce6540479cf8596585c20dc39a5b2d63009c6073d6a26a8966dffc04245b99",
+    "9acf03ecc99d9fe7cd240da6e123e482ffdfc8c3bcf310b6c69f95d4763a0752"
+  ],
+  "rejected_classification_ids": [],
+  "event_clusters": [
+    {
+      "representative_id": "6e303f10f03804780479deaedca39ccba7ad2022bfd635f213cc6297d7da33e9",
+      "article_ids": [
+        "6e303f10f03804780479deaedca39ccba7ad2022bfd635f213cc6297d7da33e9"
+      ]
+    },
+    {
+      "representative_id": "76ce6540479cf8596585c20dc39a5b2d63009c6073d6a26a8966dffc04245b99",
+      "article_ids": [
+        "76ce6540479cf8596585c20dc39a5b2d63009c6073d6a26a8966dffc04245b99"
+      ]
+    },
+    {
+      "representative_id": "9acf03ecc99d9fe7cd240da6e123e482ffdfc8c3bcf310b6c69f95d4763a0752",
+      "article_ids": [
+        "9acf03ecc99d9fe7cd240da6e123e482ffdfc8c3bcf310b6c69f95d4763a0752"
+      ]
+    }
+  ],
+  "eligible": false,
+  "coverage_state": "articles_observed",
+  "definitions": {
+    "event_count": "Relevance-weighted exact URL/content/headline or attested-event clusters; semantic syndication coverage not established",
+    "coverage_observed": "1 if any eligible article version observed, not a continuity guarantee",
+    "missing_classification_fraction": "Missing/unsupported classifications / eligible article versions",
+    "positive": "Weighted unique-event sum in the configured past evidence window",
+    "negative": "Weighted unique-event sum in the configured past evidence window",
+    "mixed": "Weighted unique-event sum in the configured past evidence window",
+    "unknown_framing": "Weighted unique-event sum in the configured past evidence window",
+    "regulatory": "Weighted unique-event sum in the configured past evidence window",
+    "macro": "Weighted unique-event sum in the configured past evidence window",
+    "security": "Weighted unique-event sum in the configured past evidence window",
+    "market_infrastructure": "Weighted unique-event sum in the configured past evidence window",
+    "flows_adoption": "Weighted unique-event sum in the configured past evidence window",
+    "corporate": "Weighted unique-event sum in the configured past evidence window",
+    "supply_network": "Weighted unique-event sum in the configured past evidence window",
+    "other": "Weighted unique-event sum in the configured past evidence window",
+    "unknown": "Weighted unique-event sum in the configured past evidence window",
+    "announcement": "Weighted unique-event sum in the configured past evidence window",
+    "realised": "Weighted unique-event sum in the configured past evidence window",
+    "commentary": "Weighted unique-event sum in the configured past evidence window",
+    "unverified": "Weighted unique-event sum in the configured past evidence window",
+    "unknown_event_status": "Weighted unique-event sum in the configured past evidence window",
+    "novelty_unknown": "1 if articles present but no time-valid earlier-event context supplied; not a novelty estimate"
+  },
+  "missingness_note": "No articles has unknown coverage and is not a neutral/no-news observation; complete extraction required",
+  "id": "e355b9cea22840510f052e8072390854fd455bcc5672a815fc28eea533f5ffa3",
+  "created_at": "2026-10-11T15:20:27.961863+00:00"
+}

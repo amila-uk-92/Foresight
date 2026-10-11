@@ -222,7 +222,19 @@ function ForecastDrill({ detail, label, onClose }: { detail: Detail; label: stri
   );
 }
 
-export function ModelComparison({ state, onRefresh }: { state: ForecastState; onRefresh: () => Promise<void> }) {
+export function ModelComparison({
+  state,
+  onRefresh,
+  labMode = "price",
+  onLabModeChange,
+  onNavigateToNewsDataset,
+}: {
+  state: ForecastState;
+  onRefresh: () => Promise<void>;
+  labMode?: "price" | "news";
+  onLabModeChange?: (mode: "price" | "news") => void;
+  onNavigateToNewsDataset?: () => void;
+}) {
   // One saved run at a time: a finished Train & Compare replaces the previous run.
   // While a new run is in progress, keep showing the last finished one.
   const runs = state.runs.filter((r) => r.mode === "comparison");
@@ -682,7 +694,7 @@ export function ModelComparison({ state, onRefresh }: { state: ForecastState; on
     ) : (
       <EvidenceFailure load={savedEvidence.load} onRetry={savedEvidence.retry} />
     );
-    body = <><NewsWorkbench /><details className="news-legacy"><summary>Saved price forecast provenance (news not retroactively attached)</summary>{provenance}</details></>;
+    body = provenance;
   } else if (evidence && tab === "numbers") {
     body = (
       <>
@@ -772,97 +784,126 @@ export function ModelComparison({ state, onRefresh }: { state: ForecastState; on
     <main className="forecast-view comparison-view v-page lab-page">
       <header className="v-header lab-toolbar">
         <h1>Forecast Lab</h1>
-        <span className="v-pill" title="Each Train & Compare replaces the previous run, its models and its predictions">
-          <span className="v-muted">Trained</span>
-          <b>{saved ? day(saved.created_at) : "Not yet"}</b>
-        </span>
-        <label className="v-pill">
-          <span className="v-muted">Forecast origin</span>
-          <input aria-label="Forecast origin (UTC)" placeholder="Latest candle" value={origin} onChange={(e) => setOrigin(e.target.value)} />
-        </label>
-        <button className="v-primary" disabled={busy || running} onClick={() => void start()}>
-          Train &amp; Compare Models
-        </button>
-        <button className="v-btn" onClick={() => setTab("evidence")}>News &amp; Macro Lab</button>
-        <div className="lab-job" role="status">
-          {job && running ? (
-            <>
-              <span className="lab-job-bar">
-                <i style={{ width: `${job.progress_percentage}%` }} />
-              </span>
-              <span className="lab-job-text" title={job.current_step}>
-                {number(job.progress_percentage)}% · {job.current_step}
-              </span>
-              <button className="v-btn small" onClick={() => void request(`/jobs/${job.job_id}/cancel`, {}).then(onRefresh)}>
-                Cancel
-              </button>
-            </>
-          ) : job ? (
-            <span className={`lab-job-text ${job.status === "failed" ? "bad" : ""}`} title={job.error || job.current_step}>
-              <i className={`v-dot ${job.status === "complete" ? "ok" : job.status === "failed" ? "bad" : "idle"}`} />
-              {job.status === "complete" ? job.current_step : `${job.status[0].toUpperCase()}${job.status.slice(1)}${job.error ? ": " + job.error : ""}`}
+        {onLabModeChange && (
+          <div className="v-top-tabs" role="tablist" aria-label="Forecast Lab mode">
+            <button
+              role="tab"
+              aria-selected={labMode === "price"}
+              className={labMode === "price" ? "on" : ""}
+              onClick={() => onLabModeChange("price")}
+            >
+              Price &amp; Volume Models
+            </button>
+            <button
+              role="tab"
+              aria-selected={labMode === "news"}
+              className={labMode === "news" ? "on" : ""}
+              onClick={() => onLabModeChange("news")}
+            >
+              News &amp; Macro Models
+            </button>
+          </div>
+        )}
+        {labMode === "price" && (
+          <>
+            <span className="v-pill" title="Each Train & Compare replaces the previous run, its models and its predictions">
+              <span className="v-muted">Trained</span>
+              <b>{saved ? day(saved.created_at) : "Not yet"}</b>
             </span>
-          ) : (
-            <span className="lab-job-text v-muted">No training run yet</span>
-          )}
-        </div>
-      </header>
-      {(error || evidence?.run.error) && (
-        <div className="error" role="alert">
-          {error || evidence?.run.error}
-        </div>
-      )}
-      {!evidence && tab !== "evidence" ? (
-        <section className="v-card v-empty">
-          <h2>Compare real models</h2>
-          <p className="v-sub">
-            Train &amp; Compare trains the configured model families on the same data, picks one on the validation months, tests it on the held-out months, then predicts the next seven days. Each run replaces the previous one, so only one trained model and one set of predictions are kept.
-          </p>
-        </section>
-      ) : (
-        <section className="v-card lab-ws" aria-label="Forecast workspace">
-          <div className="lab-ws-head">
-            <div className="lab-tabs" role="tablist" aria-label="Forecast views">
-              {TABS.map(([k, label]) => (
-                <button key={k} id={`forecast-tab-${k}`} role="tab" aria-controls={`forecast-panel-${k}`} aria-selected={tab === k} tabIndex={tab === k ? 0 : -1} className={tab === k ? "on" : ""} onClick={() => setTab(k)} onKeyDown={e => {
-                  if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key)) return;
-                  e.preventDefault();
-                  const i = TABS.findIndex(([id]) => id === k);
-                  const next = e.key === "Home" ? 0 : e.key === "End" ? TABS.length - 1 : (i + (e.key === "ArrowRight" ? 1 : -1) + TABS.length) % TABS.length;
-                  setTab(TABS[next][0]);
-                  (e.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('[role="tab"]')[next])?.focus();
-                }}>
-                  {label}
-                </button>
-              ))}
-            </div>
-            <div className="lab-ws-controls">
-              {tab === "next" && (
-                <label className="lab-toggle" title="Hide the price history before the forecast start">
-                  <input type="checkbox" checked={forecastOnly} onChange={(e) => setForecastOnly(e.target.checked)} />
-                  Forecast only
-                </label>
+            <label className="v-pill">
+              <span className="v-muted">Forecast origin</span>
+              <input aria-label="Forecast origin (UTC)" placeholder="Latest candle" value={origin} onChange={(e) => setOrigin(e.target.value)} />
+            </label>
+            <button className="v-primary" disabled={busy || running} onClick={() => void start()}>
+              Train &amp; Compare Models
+            </button>
+            <div className="lab-job" role="status">
+              {job && running ? (
+                <>
+                  <span className="lab-job-bar">
+                    <i style={{ width: `${job.progress_percentage}%` }} />
+                  </span>
+                  <span className="lab-job-text" title={job.current_step}>
+                    {number(job.progress_percentage)}% · {job.current_step}
+                  </span>
+                  <button className="v-btn small" onClick={() => void request(`/jobs/${job.job_id}/cancel`, {}).then(onRefresh)}>
+                    Cancel
+                  </button>
+                </>
+              ) : job ? (
+                <span className={`lab-job-text ${job.status === "failed" ? "bad" : ""}`} title={job.error || job.current_step}>
+                  <i className={`v-dot ${job.status === "complete" ? "ok" : job.status === "failed" ? "bad" : "idle"}`} />
+                  {job.status === "complete" ? job.current_step : `${job.status[0].toUpperCase()}${job.status.slice(1)}${job.error ? ": " + job.error : ""}`}
+                </span>
+              ) : (
+                <span className="lab-job-text v-muted">No training run yet</span>
               )}
-              {tab === "next" && !forecastOnly && (
-                <div className="v-seg small" role="group" aria-label="History shown">
-                  {[7, 30, 90, 180, 365].map((d) => (
-                    <button key={d} className={historyDays === d ? "on" : ""} aria-pressed={historyDays === d} onClick={() => setHistoryDays(d)}>
-                      {d === 365 ? "1y" : `${d}d`}
+            </div>
+          </>
+        )}
+      </header>
+      {labMode === "news" ? (
+        <NewsWorkbench mode="forecast" onNavigateToDataset={onNavigateToNewsDataset} />
+      ) : (
+        <>
+          {(error || evidence?.run.error) && (
+            <div className="error" role="alert">
+              {error || evidence?.run.error}
+            </div>
+          )}
+          {!evidence && tab !== "evidence" ? (
+            <section className="v-card v-empty">
+              <h2>Compare real models</h2>
+              <p className="v-sub">
+                Train &amp; Compare trains the configured model families on the same data, picks one on the validation months, tests it on the held-out months, then predicts the next seven days. Each run replaces the previous one, so only one trained model and one set of predictions are kept.
+              </p>
+            </section>
+          ) : (
+            <section className="v-card lab-ws" aria-label="Forecast workspace">
+              <div className="lab-ws-head">
+                <div className="lab-tabs" role="tablist" aria-label="Forecast views">
+                  {TABS.map(([k, label]) => (
+                    <button key={k} id={`forecast-tab-${k}`} role="tab" aria-controls={`forecast-panel-${k}`} aria-selected={tab === k} tabIndex={tab === k ? 0 : -1} className={tab === k ? "on" : ""} onClick={() => setTab(k)} onKeyDown={e => {
+                      if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key)) return;
+                      e.preventDefault();
+                      const i = TABS.findIndex(([id]) => id === k);
+                      const next = e.key === "Home" ? 0 : e.key === "End" ? TABS.length - 1 : (i + (e.key === "ArrowRight" ? 1 : -1) + TABS.length) % TABS.length;
+                      setTab(TABS[next][0]);
+                      (e.currentTarget.parentElement?.querySelectorAll<HTMLButtonElement>('[role="tab"]')[next])?.focus();
+                    }}>
+                      {label}
                     </button>
                   ))}
                 </div>
-              )}
-              {tab === "actual" && horizonPicker}
-              {(tab === "next" || tab === "actual") && graphControls}
-            </div>
-          </div>
-          <div id={`forecast-panel-${tab}`} aria-labelledby={`forecast-tab-${tab}`} className={`lab-ws-body tab-${tab}`} role="tabpanel">
-            {body}
-          </div>
-        </section>
-      )}
-      {inspecting && (
-        <InspectDrawer detail={inspecting} label={`${labelOf(inspecting.forecast.model_version)} · Price & Volume Specialist`} onClose={() => setInspecting(null)} />
+                <div className="lab-ws-controls">
+                  {tab === "next" && (
+                    <label className="lab-toggle" title="Hide the price history before the forecast start">
+                      <input type="checkbox" checked={forecastOnly} onChange={(e) => setForecastOnly(e.target.checked)} />
+                      Forecast only
+                    </label>
+                  )}
+                  {tab === "next" && !forecastOnly && (
+                    <div className="v-seg small" role="group" aria-label="History shown">
+                      {[7, 30, 90, 180, 365].map((d) => (
+                        <button key={d} className={historyDays === d ? "on" : ""} aria-pressed={historyDays === d} onClick={() => setHistoryDays(d)}>
+                          {d === 365 ? "1y" : `${d}d`}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                  {tab === "actual" && horizonPicker}
+                  {(tab === "next" || tab === "actual") && graphControls}
+                </div>
+              </div>
+              <div id={`forecast-panel-${tab}`} aria-labelledby={`forecast-tab-${tab}`} className={`lab-ws-body tab-${tab}`} role="tabpanel">
+                {body}
+              </div>
+            </section>
+          )}
+          {inspecting && (
+            <InspectDrawer detail={inspecting} label={`${labelOf(inspecting.forecast.model_version)} · Price & Volume Specialist`} onClose={() => setInspecting(null)} />
+          )}
+        </>
       )}
     </main>
   );

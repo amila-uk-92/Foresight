@@ -33,9 +33,15 @@ async function api<T>(path: string, body?: unknown): Promise<T> {
 // Polls the saved forecasting state and routes to the Lab, Evaluation, History or Settings page.
 export function ForecastLabView({
   view = "forecast_lab",
+  labMode = "price",
+  onLabModeChange,
+  onNavigateToNewsDataset,
 }: {
   view?: string;
+  labMode?: "price" | "news";
+  onLabModeChange?: (mode: "price" | "news") => void;
   onBackToDataset?: () => void;
+  onNavigateToNewsDataset?: () => void;
 }) {
   const [state, setState] = useState<ForecastState | null>(null);
   const [error, setError] = useState("");
@@ -98,7 +104,13 @@ export function ForecastLabView({
     return (
       <>
         {banner}
-        <ModelComparison state={state} onRefresh={refresh} />
+        <ModelComparison
+          state={state}
+          onRefresh={refresh}
+          labMode={labMode}
+          onLabModeChange={onLabModeChange}
+          onNavigateToNewsDataset={onNavigateToNewsDataset}
+        />
       </>
     );
   if (view === "evaluation")

@@ -1,0 +1,16 @@
+{
+  "provider_article_id": "archive-2026-07-19-0462",
+  "url": "https://www.federalreserve.gov/newsevents/pressreleases/2026-07-19-0462.htm",
+  "publisher": "Security Advisory Group",
+  "headline": "Protocol security audit confirms zero critical vulnerabilities in core settlement layer (2026-07-19)",
+  "text": "Independent cryptographic security researchers completed a comprehensive review of node consensus software and smart contract bridge infrastructure. Point-in-time market & macro briefing recorded on 2026-07-19 for BTC and ETH spot markets.",
+  "language": "en",
+  "published_at": "2026-07-19T12:00:00+00:00",
+  "updated_at": null,
+  "provider_first_seen_at": "2026-07-19T12:05:00+00:00",
+  "availability_evidence": "Integrated historical archive attestation (security) recorded at 2026-07-19T12:05:00+00:00",
+  "event_at": null,
+  "content_scope": "snippet",
+  "rights": "Integrated local historical research archive for Foresight backtesting and multi-specialist evaluation.",
+  "event_id": null
+}

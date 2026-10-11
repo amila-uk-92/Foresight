@@ -5,6 +5,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from pathlib import Path
 from contextlib import asynccontextmanager
+try:
+    import truststore
+    truststore.inject_into_ssl()
+except Exception:
+    pass
 from backend.app.jobs import jobs
 from backend.app.api.forecasts import router as forecasting_router
 

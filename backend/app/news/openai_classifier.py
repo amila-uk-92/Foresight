@@ -6,6 +6,12 @@ import time
 
 import httpx
 
+try:
+    import truststore
+    truststore.inject_into_ssl()
+except Exception:
+    pass
+
 from backend.app.news.classifiers import questions, validate_answers
 
 MODEL = os.getenv("FORESIGHT_OPENAI_MODEL", "gpt-4o-mini-2024-07-18")

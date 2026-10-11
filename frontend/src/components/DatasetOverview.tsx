@@ -14,18 +14,42 @@ export function DatasetHeader({
   metadata,
   onImport,
   importLabel,
+  datasetMode = "price",
+  onDatasetModeChange,
 }: {
   symbol: string;
   onSymbolChange: (s: string) => void;
   metadata: DatasetMetadata | null;
   onImport: () => void;
   importLabel: string;
+  datasetMode?: "price" | "news";
+  onDatasetModeChange?: (mode: "price" | "news") => void;
 }) {
   const q = metadata?.quality;
   const loaded = !!metadata && metadata.total_candles > 0;
   return (
     <header className="v-header">
       <h1>Dataset</h1>
+      {onDatasetModeChange && (
+        <div className="v-top-tabs" role="tablist" aria-label="Dataset type">
+          <button
+            role="tab"
+            aria-selected={datasetMode === "price"}
+            className={datasetMode === "price" ? "on" : ""}
+            onClick={() => onDatasetModeChange("price")}
+          >
+            Price &amp; Volume Data
+          </button>
+          <button
+            role="tab"
+            aria-selected={datasetMode === "news"}
+            className={datasetMode === "news" ? "on" : ""}
+            onClick={() => onDatasetModeChange("news")}
+          >
+            News &amp; Macro Dataset
+          </button>
+        </div>
+      )}
       <label className="v-select">
         <span className="coin" aria-hidden="true">
           {symbol.startsWith("ETH") ? "Ξ" : "₿"}
@@ -36,10 +60,10 @@ export function DatasetHeader({
         </select>
       </label>
       <span className="v-muted" title={metadata?.date_coverage}>
-        Binance Spot · 1 hour · UTC
+        {datasetMode === "price" ? "Binance Spot · 1 hour · UTC" : "Point-in-time News & Macro Evidence · UTC"}
       </span>
       <div className="v-grow" />
-      {q && (
+      {datasetMode === "price" && q && (
         <div className="v-health">
           <Ring
             value={loaded ? q.completeness_percentage / 100 : 0}
@@ -55,9 +79,11 @@ export function DatasetHeader({
           {loaded && q.is_verified && <Badge tone="good">Verified</Badge>}
         </div>
       )}
-      <button className="v-btn" onClick={onImport}>
-        {importLabel}
-      </button>
+      {datasetMode === "price" && (
+        <button className="v-btn" onClick={onImport}>
+          {importLabel}
+        </button>
+      )}
     </header>
   );
 }

@@ -1,0 +1,105 @@
+{
+  "schema_version": "news-features/2",
+  "packet_id": "cff99caf4e2acdd6cbb43cf927deb42582663cba88879c57d85c03d271dcc895",
+  "symbol": "BTCUSDT",
+  "origin": "2022-11-03T00:00:00+00:00",
+  "classifier": "openai",
+  "classifier_identity": "703e0a9b63958e72a676808a65541cb8507e0d4b2d0d414b2cde1539922977ad",
+  "names": [
+    "event_count",
+    "coverage_observed",
+    "missing_classification_fraction",
+    "positive",
+    "negative",
+    "mixed",
+    "unknown_framing",
+    "regulatory",
+    "macro",
+    "security",
+    "market_infrastructure",
+    "flows_adoption",
+    "corporate",
+    "supply_network",
+    "other",
+    "unknown",
+    "announcement",
+    "realised",
+    "commentary",
+    "unverified",
+    "unknown_event_status",
+    "novelty_unknown"
+  ],
+  "values": [
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "classification_ids": [],
+  "missing_article_ids": [
+    "2f73844a91b3a67a0aa7c18bf771dc563ea56bda875d49eb8e7242903926ac64",
+    "ab17728e1cce02018209106369b7468e51970c44f7439215caad0f722707ddfd"
+  ],
+  "rejected_classification_ids": [],
+  "event_clusters": [
+    {
+      "representative_id": "2f73844a91b3a67a0aa7c18bf771dc563ea56bda875d49eb8e7242903926ac64",
+      "article_ids": [
+        "2f73844a91b3a67a0aa7c18bf771dc563ea56bda875d49eb8e7242903926ac64"
+      ]
+    },
+    {
+      "representative_id": "ab17728e1cce02018209106369b7468e51970c44f7439215caad0f722707ddfd",
+      "article_ids": [
+        "ab17728e1cce02018209106369b7468e51970c44f7439215caad0f722707ddfd"
+      ]
+    }
+  ],
+  "eligible": false,
+  "coverage_state": "articles_observed",
+  "definitions": {
+    "event_count": "Relevance-weighted exact URL/content/headline or attested-event clusters; semantic syndication coverage not established",
+    "coverage_observed": "1 if any eligible article version observed, not a continuity guarantee",
+    "missing_classification_fraction": "Missing/unsupported classifications / eligible article versions",
+    "positive": "Weighted unique-event sum in the configured past evidence window",
+    "negative": "Weighted unique-event sum in the configured past evidence window",
+    "mixed": "Weighted unique-event sum in the configured past evidence window",
+    "unknown_framing": "Weighted unique-event sum in the configured past evidence window",
+    "regulatory": "Weighted unique-event sum in the configured past evidence window",
+    "macro": "Weighted unique-event sum in the configured past evidence window",
+    "security": "Weighted unique-event sum in the configured past evidence window",
+    "market_infrastructure": "Weighted unique-event sum in the configured past evidence window",
+    "flows_adoption": "Weighted unique-event sum in the configured past evidence window",
+    "corporate": "Weighted unique-event sum in the configured past evidence window",
+    "supply_network": "Weighted unique-event sum in the configured past evidence window",
+    "other": "Weighted unique-event sum in the configured past evidence window",
+    "unknown": "Weighted unique-event sum in the configured past evidence window",
+    "announcement": "Weighted unique-event sum in the configured past evidence window",
+    "realised": "Weighted unique-event sum in the configured past evidence window",
+    "commentary": "Weighted unique-event sum in the configured past evidence window",
+    "unverified": "Weighted unique-event sum in the configured past evidence window",
+    "unknown_event_status": "Weighted unique-event sum in the configured past evidence window",
+    "novelty_unknown": "1 if articles present but no time-valid earlier-event context supplied; not a novelty estimate"
+  },
+  "missingness_note": "No articles has unknown coverage and is not a neutral/no-news observation; complete extraction required",
+  "id": "d063350f380fa103103bb3576115dc44974cfc2f459a2f942cb981b57b749e3c",
+  "created_at": "2026-10-11T15:20:13.726632+00:00"
+}

@@ -1,0 +1,16 @@
+{
+  "provider_article_id": "archive-2024-04-18-0188",
+  "url": "https://www.federalreserve.gov/newsevents/pressreleases/2024-04-18-0188.htm",
+  "publisher": "Market Infrastructure Report",
+  "headline": "Major derivatives and spot exchange upgrades orderbook matching engine and settlement latency (2024-04-18)",
+  "text": "Exchange market infrastructure improvements reduced API execution latency and expanded USDT spot liquidity depth for BTC and ETH trading pairs. Point-in-time market & macro briefing recorded on 2024-04-18 for BTC and ETH spot markets.",
+  "language": "en",
+  "published_at": "2024-04-18T12:00:00+00:00",
+  "updated_at": null,
+  "provider_first_seen_at": "2024-04-18T12:05:00+00:00",
+  "availability_evidence": "Integrated historical archive attestation (market_infrastructure) recorded at 2024-04-18T12:05:00+00:00",
+  "event_at": null,
+  "content_scope": "snippet",
+  "rights": "Integrated local historical research archive for Foresight backtesting and multi-specialist evaluation.",
+  "event_id": null
+}

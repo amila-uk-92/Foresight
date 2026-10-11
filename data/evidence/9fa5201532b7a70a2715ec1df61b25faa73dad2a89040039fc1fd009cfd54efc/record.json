@@ -1,0 +1,33 @@
+{
+  "schema_version": "evidence-packet/1",
+  "symbol": "BTCUSDT",
+  "origin": "2026-10-11T14:45:05.402000+00:00",
+  "window_start": "2026-10-04T14:45:05.402000+00:00",
+  "lookback_days": 7,
+  "policy": "strict",
+  "profile": {
+    "instrument_id": "BTCUSDT",
+    "asset_class": "crypto",
+    "venue": "Binance Spot",
+    "currency": "USDT",
+    "name": "BTC/USDT",
+    "aliases": [
+      "BTCUSDT",
+      "BTC/USDT",
+      "BTC",
+      "bitcoin"
+    ],
+    "taxonomy": "news-taxonomy/1",
+    "version": "506c5fda242f59d06187b65d95824f284a27fdb394debfe1947c52a1091bf073"
+  },
+  "article_ids": [],
+  "excluded": [],
+  "coverage_state": "coverage_unknown",
+  "limitations": [
+    "Source continuity is not established; an empty packet is not proof of no relevant news",
+    "Provider attestations need source audit",
+    "Historical AI extraction can contain model memorization"
+  ],
+  "id": "9fa5201532b7a70a2715ec1df61b25faa73dad2a89040039fc1fd009cfd54efc",
+  "created_at": "2026-10-11T14:45:07.312323+00:00"
+}

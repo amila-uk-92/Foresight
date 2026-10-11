@@ -4,6 +4,7 @@ import { MainChart } from "./components/MainChart";
 import { CandleInspector } from "./components/CandleInspector";
 import { ForecastLabView } from "./components/ForecastLabView";
 import { ImportModal } from "./components/ImportModal";
+import { NewsWorkbench } from "./components/NewsWorkbench";
 import {
   DatasetHeader,
   DatasetTiles,
@@ -32,6 +33,12 @@ const writeSetting = (key: string, value: string) => {
 export const App: React.FC = () => {
   // Navigation
   const [activeTab, setActiveTab] = useState<string>("dataset");
+  const [datasetMode, setDatasetMode] = useState<"price" | "news">(
+    () => (readSetting("datasetMode", "price") === "news" ? "news" : "price"),
+  );
+  const [labMode, setLabMode] = useState<"price" | "news">(
+    () => (readSetting("labMode", "price") === "news" ? "news" : "price"),
+  );
   const [selectedSymbol, setSelectedSymbol] = useState<string>("BTCUSDT");
 
   // Display toggles
@@ -76,6 +83,8 @@ export const App: React.FC = () => {
     () => writeSetting("sidebarCollapsed", sidebarCollapsed ? "1" : "0"),
     [sidebarCollapsed],
   );
+  useEffect(() => writeSetting("datasetMode", datasetMode), [datasetMode]);
+  useEffect(() => writeSetting("labMode", labMode), [labMode]);
   const lastImportStatus = useRef<ImportStatus | null>(null);
 
   // Chart requests are independent of table pagination. Abort superseded loads.
@@ -230,7 +239,7 @@ export const App: React.FC = () => {
     <div className="app-shell">
       {/* Main Layout Body */}
       <div
-        className={`app-body ${activeTab === "dataset" ? "dataset-body" : "forecast-body"} ${inspectorOpen ? "inspector-visible" : "inspector-collapsed"} ${sidebarCollapsed ? "nav-collapsed" : ""}`}
+        className={`app-body ${activeTab === "dataset" && datasetMode === "price" ? "dataset-body" : "forecast-body"} ${inspectorOpen ? "inspector-visible" : "inspector-collapsed"} ${sidebarCollapsed ? "nav-collapsed" : ""}`}
       >
         {/* Left Sidebar */}
         <Sidebar
@@ -243,7 +252,13 @@ export const App: React.FC = () => {
         {activeTab !== "dataset" ? (
           <ForecastLabView
             view={activeTab}
+            labMode={labMode}
+            onLabModeChange={setLabMode}
             onBackToDataset={() => setActiveTab("dataset")}
+            onNavigateToNewsDataset={() => {
+              setDatasetMode("news");
+              setActiveTab("dataset");
+            }}
           />
         ) : (
           <>
@@ -251,6 +266,8 @@ export const App: React.FC = () => {
               <DatasetHeader
                 symbol={selectedSymbol}
                 metadata={metadata}
+                datasetMode={datasetMode}
+                onDatasetModeChange={setDatasetMode}
                 onSymbolChange={(sym) => {
                   setSelectedSymbol(sym);
                   setCurrentPage(1);
@@ -271,70 +288,90 @@ export const App: React.FC = () => {
                   </button>
                 </div>
               )}
-              <div className="v-stage dataset-fit">
-              <section className="v-card v-hero" aria-label="Price history">
-                <div className="v-hero-top">
-                  <PriceSummary
-                    candles={chartCandles}
-                    filter={activeSplitFilter}
+              {datasetMode === "news" ? (
+                <div className="v-stage news-dataset-stage">
+                  <NewsWorkbench
+                    symbol={selectedSymbol}
+                    mode="dataset"
+                    onSymbolChange={(sym) => {
+                      setSelectedSymbol(sym);
+                      setCurrentPage(1);
+                      setSelectedCandle(null);
+                    }}
+                    onNavigateToLab={() => {
+                      setLabMode("news");
+                      setActiveTab("forecast_lab");
+                    }}
                   />
-                  {metadata && (
-                    <SplitChips
-                      splits={metadata.splits}
-                      active={activeSplitFilter}
-                      onSelect={(split) => {
-                        setActiveSplitFilter(split);
-                        setCurrentPage(1);
-                        setSelectedCandle(null);
-                      }}
-                    />
-                  )}
-                  <div className="v-toggles">
-                    <label>
-                      <input
-                        type="checkbox"
-                        checked={showSplitRegions}
-                        onChange={(e) => setShowSplitRegions(e.target.checked)}
-                      />
-                      Shading
-                    </label>
-                    <label>
-                      <input
-                        type="checkbox"
-                        checked={showVolume}
-                        onChange={(e) => setShowVolume(e.target.checked)}
-                      />
-                      Volume
-                    </label>
-                  </div>
                 </div>
-                <MainChart
-                  candles={chartCandles}
-                  symbol={selectedSymbol}
-                  showSplitRegions={showSplitRegions}
-                  showVolume={showVolume}
-                  activeSplitFilter={activeSplitFilter}
-                  onHoverCandle={setHoveredCandle}
-                  selectedCandle={selectedCandle}
-                />
-                {metadata && <SplitRibbon splits={metadata.splits} />}
-              </section>
-              {metadata && <DatasetTiles metadata={metadata} />}
-              </div>
+              ) : (
+                <div className="v-stage dataset-fit">
+                  <section className="v-card v-hero" aria-label="Price history">
+                    <div className="v-hero-top">
+                      <PriceSummary
+                        candles={chartCandles}
+                        filter={activeSplitFilter}
+                      />
+                      {metadata && (
+                        <SplitChips
+                          splits={metadata.splits}
+                          active={activeSplitFilter}
+                          onSelect={(split) => {
+                            setActiveSplitFilter(split);
+                            setCurrentPage(1);
+                            setSelectedCandle(null);
+                          }}
+                        />
+                      )}
+                      <div className="v-toggles">
+                        <label>
+                          <input
+                            type="checkbox"
+                            checked={showSplitRegions}
+                            onChange={(e) => setShowSplitRegions(e.target.checked)}
+                          />
+                          Shading
+                        </label>
+                        <label>
+                          <input
+                            type="checkbox"
+                            checked={showVolume}
+                            onChange={(e) => setShowVolume(e.target.checked)}
+                          />
+                          Volume
+                        </label>
+                      </div>
+                    </div>
+                    <MainChart
+                      candles={chartCandles}
+                      symbol={selectedSymbol}
+                      showSplitRegions={showSplitRegions}
+                      showVolume={showVolume}
+                      activeSplitFilter={activeSplitFilter}
+                      onHoverCandle={setHoveredCandle}
+                      selectedCandle={selectedCandle}
+                    />
+                    {metadata && <SplitRibbon splits={metadata.splits} />}
+                  </section>
+                  {metadata && <DatasetTiles metadata={metadata} />}
+                </div>
+              )}
             </main>
 
-            <CandleInspector
-              collapsed={!inspectorOpen}
-              onToggleCollapsed={() => setInspectorOpen((open) => !open)}
-              candles={tableCandles}
-              totalRows={totalTableRows}
-              currentPage={currentPage}
-              pageSize={pageSize}
-              isRealData={isRealData}
-              onPageChange={setCurrentPage}
-              onRowClick={setSelectedCandle}
-              selectedCandle={selectedCandle}
-            />
+            {datasetMode === "price" && (
+              <CandleInspector
+                collapsed={!inspectorOpen}
+                onToggleCollapsed={() => setInspectorOpen((open) => !open)}
+                candles={tableCandles}
+                totalRows={totalTableRows}
+                currentPage={currentPage}
+                pageSize={pageSize}
+                isRealData={isRealData}
+                onPageChange={setCurrentPage}
+                onRowClick={setSelectedCandle}
+                selectedCandle={selectedCandle}
+              />
+            )}
           </>
         )}
       </div>
