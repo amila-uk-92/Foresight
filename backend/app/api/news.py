@@ -1,6 +1,7 @@
 """Thin adapters for durable news workflows. Mutations never run on navigation."""
 from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel, Field
+from typing import Literal
 from backend.app.jobs import jobs
 from backend.app.news.service import NewsService
 from backend.app.news.contracts import ImportRequest, PacketRequest, ClassifyRequest, LabelRequest, ForecastExperimentRequest
@@ -36,7 +37,7 @@ def coverage(symbol: str = "BTCUSDT"):
 
 @router.get("/records/{kind}")
 def records(kind: str, symbol: str | None = None, provider: str | None = None, q: str | None = Query(None, max_length=200), page: int = Query(1, ge=1), page_size: int = Query(50, ge=1, le=100)):
-    if kind not in {"article", "packet", "classification", "classification_experiment", "classification_evaluation", "forecast_manifest", "forecast_checkpoint", "forecast_experiment", "label"}:
+    if kind not in {"article", "packet", "classification", "classification_experiment", "classification_evaluation", "forecast_manifest", "forecast_checkpoint", "forecast_experiment", "provider_response", "label"}:
         raise HTTPException(404, "Unknown news record type")
     rows = service.records.list(kind)
     if symbol:
@@ -50,7 +51,7 @@ def records(kind: str, symbol: str | None = None, provider: str | None = None, q
 
 @router.get("/records/{kind}/{id}")
 def record(kind: str, id: str):
-    if kind not in {"article", "packet", "features", "classification", "classification_experiment", "classification_evaluation", "forecast_manifest", "forecast_experiment", "forecast_checkpoint", "incumbent_snapshot", "label"}:
+    if kind not in {"article", "packet", "features", "classification", "classification_experiment", "classification_evaluation", "forecast_manifest", "forecast_experiment", "forecast_checkpoint", "incumbent_snapshot", "provider_response", "label"}:
         raise HTTPException(404, "Unknown news record type")
     try:
         return service.records.get(kind, id)
@@ -96,11 +97,12 @@ def label(req: LabelRequest):
 
 class EvaluationRequest(BaseModel):
     packet_id: str
+    classifier: Literal["jev", "openai"] = "jev"
 
 
 @router.post("/classification-evaluations")
 def evaluation(req: EvaluationRequest):
-    return call(lambda: service.classification_evaluation(req.packet_id))
+    return call(lambda: service.classification_evaluation(req.packet_id, req.classifier))
 
 
 @router.get("/jobs/{id}")

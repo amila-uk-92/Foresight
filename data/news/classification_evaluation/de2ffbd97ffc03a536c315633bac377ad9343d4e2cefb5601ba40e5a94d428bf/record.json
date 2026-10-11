@@ -1,0 +1,75 @@
+{
+  "schema_version": "classification-evaluation/1",
+  "packet_id": "46e5181ecb715c3b9f6fcf2cf4b1ac5e0def9837ffb19d130661092075963465",
+  "comparison_classifier": "openai",
+  "label_ids": [],
+  "classification_ids": [],
+  "conflicting_article_ids": [],
+  "results": {
+    "keywords": {
+      "sample_count": 0,
+      "article_ids": [],
+      "metrics": {
+        "relevance": {
+          "matrix": {},
+          "per_category": {},
+          "macro_f1": null
+        },
+        "category": {
+          "matrix": {},
+          "per_category": {},
+          "macro_f1": null
+        },
+        "framing": {
+          "matrix": {},
+          "per_category": {},
+          "macro_f1": null
+        }
+      },
+      "multiclass_brier": null,
+      "abstentions": 0,
+      "cost_usd": 0,
+      "latency_seconds": 0,
+      "accepted_count": 0,
+      "accepted_decision_accuracy": null,
+      "supported_passage_fraction": null,
+      "support_note": "Selected supplied passage exists; semantic support has not been human verified",
+      "input_tokens": 0
+    },
+    "openai": {
+      "sample_count": 0,
+      "article_ids": [],
+      "metrics": {
+        "relevance": {
+          "matrix": {},
+          "per_category": {},
+          "macro_f1": null
+        },
+        "category": {
+          "matrix": {},
+          "per_category": {},
+          "macro_f1": null
+        },
+        "framing": {
+          "matrix": {},
+          "per_category": {},
+          "macro_f1": null
+        }
+      },
+      "multiclass_brier": null,
+      "abstentions": 0,
+      "cost_usd": 0,
+      "latency_seconds": 0,
+      "accepted_count": 0,
+      "accepted_decision_accuracy": null,
+      "supported_passage_fraction": null,
+      "support_note": "Selected supplied passage exists; semantic support has not been human verified",
+      "input_tokens": 0
+    }
+  },
+  "matched_article_ids": [],
+  "status": "insufficient_evidence",
+  "note": "Human labels are required; this is extraction quality, not forecasting accuracy. Freeze this sample before tuning.",
+  "id": "de2ffbd97ffc03a536c315633bac377ad9343d4e2cefb5601ba40e5a94d428bf",
+  "created_at": "2026-10-11T13:26:26.147118+00:00"
+}

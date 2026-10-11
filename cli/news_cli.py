@@ -20,10 +20,10 @@ def main():
     p = commands.add_parser('collect'); p.add_argument('--source', default='federal-reserve')
     p = commands.add_parser('packet'); p.add_argument('--symbol', default='BTCUSDT'); p.add_argument('--origin', required=True); p.add_argument('--lookback-days', type=int, default=7); p.add_argument('--policy', choices=['strict','exploratory'], default='strict')
     for command in ('preview', 'classify'):
-        p = commands.add_parser(command); p.add_argument('packet_id'); p.add_argument('--classifier', choices=['keywords','jev'], default='keywords'); p.add_argument('--budget-usd', type=float, default=0); p.add_argument('--max-articles', type=int, default=100)
-    p = commands.add_parser('features'); p.add_argument('packet_id'); p.add_argument('--classifier', choices=['keywords','jev'], default='keywords')
+        p = commands.add_parser(command); p.add_argument('packet_id'); p.add_argument('--classifier', choices=['keywords','jev','openai'], default='keywords'); p.add_argument('--budget-usd', type=float, default=0); p.add_argument('--max-articles', type=int, default=100)
+    p = commands.add_parser('features'); p.add_argument('packet_id'); p.add_argument('--classifier', choices=['keywords','jev','openai'], default='keywords')
     p = commands.add_parser('label'); p.add_argument('file', type=Path)
-    p = commands.add_parser('evaluate'); p.add_argument('packet_id')
+    p = commands.add_parser('evaluate'); p.add_argument('packet_id'); p.add_argument('--classifier', choices=['jev','openai'], default='jev')
     p = commands.add_parser('train'); p.add_argument('--symbol', default='BTCUSDT'); p.add_argument('--policy', choices=['strict','exploratory'], default='strict'); p.add_argument('--evidence-lookback-days', type=int, default=7)
     p = commands.add_parser('predict'); p.add_argument('model_id'); p.add_argument('--origin')
     p = commands.add_parser('read'); p.add_argument('kind'); p.add_argument('id')
@@ -45,7 +45,7 @@ def main():
         result = service.preview(req.packet_id, req.classifier, req.max_articles) if args.command == 'preview' else service.classify(**req.model_dump())
     elif args.command == 'features': result = service.features(service.records.get('packet',args.packet_id),args.classifier)
     elif args.command == 'label': result = service.label(LabelRequest.model_validate_json(args.file.read_text()).model_dump())
-    elif args.command == 'evaluate': result = service.classification_evaluation(args.packet_id)
+    elif args.command == 'evaluate': result = service.classification_evaluation(args.packet_id,args.classifier)
     elif args.command == 'train':
         from backend.app.news.forecasting import experiment
         from backend.app.forecasting.data import MarketData

@@ -11,6 +11,9 @@ frontend/dist/
 
 # macOS & editor artifacts
 .DS_Store
+.env
+.env.*
+!.env.example
 *.swp
 
 # Temporary transfer archives & scratch directories

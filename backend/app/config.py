@@ -3,6 +3,10 @@
 from pathlib import Path
 from datetime import datetime, timezone, timedelta
 import os
+from dotenv import load_dotenv
+
+# Server and CLI share local configuration; exported settings take precedence.
+load_dotenv(Path(__file__).resolve().parents[2] / ".env", override=False)
 
 
 def configured_date(name, default):

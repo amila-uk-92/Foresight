@@ -26,6 +26,9 @@ class NewsStore:
                     id TEXT PRIMARY KEY, budget_id TEXT, reserved_usd REAL, actual_usd REAL,
                     status TEXT, created TEXT);
             """)
+            columns = {r["name"] for r in db.execute("PRAGMA table_info(news_reservations)")}
+            if "provider" not in columns:
+                db.execute("ALTER TABLE news_reservations ADD COLUMN provider TEXT")
 
     def put(self, kind, value):
         value = dict(value)
@@ -78,7 +81,12 @@ class NewsStore:
             raise ValueError("An existing experiment budget cannot be changed")
         return {"id": id, "limit_usd": row[0], "charged_or_reserved_usd": used, "remaining_usd": max(0, row[0] - used)}
 
-    def reserve(self, budget_id, amount):
+    def provider_budget(self, provider, limit):
+        with self.store.connection() as db:
+            used = db.execute("SELECT COALESCE(SUM(COALESCE(actual_usd,reserved_usd)),0) FROM news_reservations WHERE provider=?", (provider,)).fetchone()[0]
+        return {"limit_usd": limit, "charged_or_reserved_usd": used, "remaining_usd": max(0, limit - used), "scope": "All provider experiments in this database; not reset on restart"}
+
+    def reserve(self, budget_id, amount, provider=None, provider_limit=None):
         if not math.isfinite(amount) or amount <= 0:
             raise ValueError("Invalid reservation")
         id = uuid.uuid4().hex
@@ -88,7 +96,13 @@ class NewsStore:
             used = db.execute("SELECT COALESCE(SUM(COALESCE(actual_usd,reserved_usd)),0) FROM news_reservations WHERE budget_id=?", (budget_id,)).fetchone()[0]
             if not row or used + amount > row[0]:
                 raise ValueError("Budget exhausted; no provider request sent")
-            db.execute("INSERT INTO news_reservations VALUES(?,?,?,?,?,?)", (id, budget_id, amount, None, "reserved", now()))
+            if provider is not None:
+                if provider_limit is None or not math.isfinite(provider_limit) or provider_limit <= 0:
+                    raise ValueError("Provider spending disabled")
+                total = db.execute("SELECT COALESCE(SUM(COALESCE(actual_usd,reserved_usd)),0) FROM news_reservations WHERE provider=?", (provider,)).fetchone()[0]
+                if total + amount > provider_limit:
+                    raise ValueError("Cumulative provider cap exhausted; no request sent")
+            db.execute("INSERT INTO news_reservations (id,budget_id,reserved_usd,actual_usd,status,created,provider) VALUES(?,?,?,?,?,?,?)", (id, budget_id, amount, None, "reserved", now(), provider))
         return id
 
     def reconcile(self, id, actual=None):

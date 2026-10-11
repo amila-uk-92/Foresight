@@ -13,6 +13,7 @@ from backend.app.news.store import NewsStore, digest
 from backend.app.news.contracts import ArticleInput, utc
 from backend.app.news.sources import SOURCES
 from backend.app.news.classifiers import KeywordClassifier, JevClassifier, classifier_identity, CATEGORIES, MODEL, PRICE
+from backend.app.news.openai_classifier import OpenAIClassifier, MODEL as OPENAI_MODEL, MAX_CALL_COST, configuration_state, experiment_cap, total_cap
 
 
 def profile(market):
@@ -82,7 +83,8 @@ class NewsService:
     def status(self):
         return {"schema_version": "news/1", "sources": [{"id": k, "kind": "forward RSS", "url": v.url} for k, v in SOURCES.items()],
                 "classifiers": [{"id": "keywords", "state": "configured", "model": KeywordClassifier.version, "label": "Deterministic rules (not calibrated)"},
-                                {"id": "jev", "state": "configured" if os.getenv("TYPESAFE_API_KEY") and os.getenv("FORESIGHT_JEV_ENABLED") == "1" else "not_configured", "model": MODEL, "price_per_million_input_usd": PRICE}],
+                                {"id": "jev", "state": "configured" if os.getenv("TYPESAFE_API_KEY") and os.getenv("FORESIGHT_JEV_ENABLED") == "1" else "not_configured", "model": MODEL, "price_per_million_input_usd": PRICE},
+                                {"id": "openai", "state": configuration_state(), "model": OPENAI_MODEL, "max_experiment_usd": experiment_cap(), "total_budget": self.records.provider_budget("openai", total_cap()), "probability_note": "Self-reported estimates; not empirical calibration", "billing_note": "API billing is separate from ChatGPT subscription; cumulative USD cap uses conservative headroom under approved GBP budget"}],
                 "markets": [profile(m) for m in markets()], "article_count": len(self.records.list("article")), "imported_providers": sorted({r["provider"] for r in self.records.list("article")}),
                 "trading": "not_enabled", "news_forecasting": "experimental", "historical_notice": "No historical coverage is inferred from forward feeds or publication dates."}
 
@@ -191,18 +193,26 @@ class NewsService:
                 pending.append(id)
         return {"packet_id": packet_id, "classifier": classifier, "article_ids": selected, "pending_ids": pending,
                 "cached_count": len(selected) - len(pending), "omitted_count": max(0, len(packet["article_ids"]) - len(selected)),
-                "conservative_max_cost_usd": len(pending) * 24000 * PRICE / 1_000_000 if classifier == "jev" else 0,
-                "pricing_status": "estimated maximum; tokens depend on input; output free is not free input", "model": MODEL if classifier == "jev" else KeywordClassifier.version}
+                "conservative_max_cost_usd": len(pending) * (MAX_CALL_COST if classifier == "openai" else 24000 * PRICE / 1_000_000 if classifier == "jev" else 0),
+                "pricing_status": "Conservative token/output allowance; estimated usage cost, not invoice-confirmed", "model": OPENAI_MODEL if classifier == "openai" else MODEL if classifier == "jev" else KeywordClassifier.version,
+                "provider_state": configuration_state() if classifier == "openai" else None,
+                "total_budget": self.records.provider_budget("openai", total_cap()) if classifier == "openai" else None}
 
     def classify(self, packet_id, classifier="keywords", budget_usd=0, max_articles=100, check=lambda: None, progress=lambda *a: None):
         preview = self.preview(packet_id, classifier, max_articles)
         packet = self.records.get("packet", packet_id)
         id = __import__("uuid").uuid4().hex
-        if classifier == "jev":
+        if classifier == "openai":
+            if configuration_state() != "configured":
+                raise ValueError("OpenAI not configured: server API key, enablement and spending caps required")
+            if budget_usd > experiment_cap():
+                raise ValueError("Experiment exceeds the server OpenAI spending cap")
+            self.records.budget(id, budget_usd)
+        elif classifier == "jev":
             if not os.getenv("TYPESAFE_API_KEY") or os.getenv("FORESIGHT_JEV_ENABLED") != "1":
                 raise ValueError("Jev not configured; keyword comparison remains available")
             self.records.budget(id, budget_usd)
-        adapter = KeywordClassifier() if classifier == "keywords" else JevClassifier(self.records)
+        adapter = KeywordClassifier() if classifier == "keywords" else OpenAIClassifier(self.records) if classifier == "openai" else JevClassifier(self.records)
         results, errors = [], []
         identity = classifier_identity(classifier, packet["profile"])
         for i, article_id in enumerate(preview["article_ids"]):
@@ -227,7 +237,7 @@ class NewsService:
             progress("Classifying news", 100 * (i + 1) / max(1, len(preview["article_ids"])))
         experiment = {"id": id, "schema_version": "classification-experiment/1", "packet_id": packet_id, "symbol": packet["symbol"], "classifier": classifier,
                       "classification_ids": results, "errors": errors, "preview": preview, "state": "failed" if errors and not results else "partial" if errors or preview["omitted_count"] else "complete",
-                      "budget": self.records.budget(id) if classifier == "jev" else None,
+                      "budget": self.records.budget(id) if classifier != "keywords" else None,
                       "evaluation_state": "not_labelled; freeze a human-labelled evaluation set before tuning"}
         return self.records.put("classification_experiment", experiment)
 
@@ -238,7 +248,9 @@ class NewsService:
             raise ValueError("Unknown category")
         return self.records.put("label", {"schema_version": "news-label/1", **values})
 
-    def classification_evaluation(self, packet_id):
+    def classification_evaluation(self, packet_id, classifier="jev"):
+        if classifier not in {"jev", "openai"}:
+            raise ValueError("Choose Jev or OpenAI for comparison with keywords")
         packet = self.records.get("packet", packet_id)
         labels = [x for x in self.records.list("label") if x["symbol"] == packet["symbol"] and x["article_id"] in packet["article_ids"]]
         by_article = {}
@@ -250,11 +262,11 @@ class NewsService:
         rows = {}
         classifications = self.records.list("classification")
         common = set(by_article) - set(conflicts)
-        maps = {name: {x["article_id"]: x for x in classifications if x["classifier"] == name and x["symbol"] == packet["symbol"] and x["profile_version"] == packet["profile"]["version"]} for name in ("keywords", "jev")}
+        maps = {name: {x["article_id"]: x for x in classifications if x["classifier"] == name and x["symbol"] == packet["symbol"] and x["profile_version"] == packet["profile"]["version"]} for name in ("keywords", classifier)}
         maps = {name: {id: x for id, x in items.items() if x["classifier_identity"] == classifier_identity(name, packet["profile"])} for name, items in maps.items()}
         # Comparing different labelled subsets would confound classifier quality
         # with article difficulty. Report only a paired frozen sample.
-        matched = common & set(maps["keywords"]) & set(maps["jev"])
+        matched = common & set(maps["keywords"]) & set(maps[classifier])
         for name, items in maps.items():
             confusion, brier = {}, []
             ids = sorted(matched)
@@ -286,7 +298,7 @@ class NewsService:
                               support_note="Selected supplied passage exists; semantic support has not been human verified",
                               input_tokens=sum(items[id].get("usage", {}).get("input_tokens", 0) for id in ids))
         # Freeze labels and classification IDs: later annotations never rewrite this evaluation.
-        return self.records.put("classification_evaluation", {"schema_version": "classification-evaluation/1", "packet_id": packet_id,
+        return self.records.put("classification_evaluation", {"schema_version": "classification-evaluation/1", "packet_id": packet_id, "comparison_classifier": classifier,
             "label_ids": sorted(x["id"] for x in labels), "classification_ids": sorted(items[id]["id"] for items in maps.values() for id in matched), "conflicting_article_ids": sorted(set(conflicts)), "results": rows,
             "matched_article_ids": sorted(matched),
             "status": "insufficient_evidence" if len(matched) < 30 else "development",

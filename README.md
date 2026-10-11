@@ -163,6 +163,18 @@ Open `http://127.0.0.1:5173`. Use a single backend worker process: job workers r
 
 ### News & Macro CLI (`cli/news_cli.py`)
 
+OpenAI news extraction is available alongside keywords and Jev. The same provider
+is available in **News & Macro Lab → Classification experiment → OpenAI**.
+It uses the Responses API with strict structured outputs and the pinned
+`gpt-4o-mini-2024-07-18` snapshot. See [OpenAI setup](docs/openai-news-setup.md).
+
+The server and CLI automatically read the project `.env` without overriding
+exported environment variables. `.env` is ignored by Git. API keys stay on the
+server; ChatGPT subscription usage does not supply API credits or authentication.
+Paid calls require both an API key and explicit spending configuration. New
+forecast experiments also offer `price_openai` and `news_openai`, using saved
+classifications only. Historical news coverage is still required for real training.
+
 Optional Jev classifier configuration (the keyword comparator works offline without credentials):
 
 ```bash

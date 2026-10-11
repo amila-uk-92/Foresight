@@ -1,0 +1,27 @@
+{
+  "models": {
+    "previous": 45,
+    "current": 45,
+    "all_previous_unchanged": true
+  },
+  "runs": {
+    "previous": 12,
+    "current": 12,
+    "all_previous_unchanged": true
+  },
+  "forecasts": {
+    "previous": 8122,
+    "current": 8122,
+    "all_previous_unchanged": true
+  },
+  "evaluations": {
+    "previous": 8120,
+    "current": 8120,
+    "all_previous_unchanged": true
+  },
+  "openai_saved_classifications": 0,
+  "openai_charged_or_reserved_usd": 0,
+  "backend_tests_passed": 131,
+  "live_provider_verified": false,
+  "live_blocker": "OpenAI API key and funded API access absent"
+}

@@ -121,4 +121,9 @@ class JevClassifier:
 
 
 def classifier_identity(name, profile):
+    if name == "openai":
+        from backend.app.news.openai_classifier import OpenAIClassifier, MODEL as openai_model
+        return digest({"name": name, "version": OpenAIClassifier.version, "model": openai_model, "profile": profile})
+    if name not in {"keywords", "jev"}:
+        raise ValueError("Unknown news classifier")
     return digest({"name": name, "version": KeywordClassifier.version if name == "keywords" else JevClassifier.version, "model": KeywordClassifier.version if name == "keywords" else MODEL, "profile": profile})

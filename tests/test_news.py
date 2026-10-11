@@ -210,7 +210,7 @@ def test_frozen_numerical_news_models_forecast_and_future_mutation(news,data,mon
     rows={}
     for t in data.calendar.origins(stamp('2023-01-01T00:00:00Z'),data.end+1):
         f=news.records.put('features',{'origin':iso(t),'names':names,'values':[float(t//86400%5),float(t//86400%3)],'eligible':True,'packet_id':'fixture-packet','classifier_identity':'fixture','classification_ids':[]})
-        rows[t]={'keywords':f,'jev':f}
+        rows[t]={'keywords':f,'jev':f,'openai':f}
     config={'lookback_days':30,'minimum_origins':30,'evidence_lookback_days':7,'policy':'strict'}
     models={}
     for variant in VARIANTS:
@@ -256,7 +256,7 @@ def test_saved_news_prediction_uses_cached_past_baseline_and_is_idempotent(news,
     assert len(news.store.list('forecasts'))==2
 
 
-def test_experiment_replays_all_four_variants_on_matched_origins(news,data,monkeypatch):
+def test_experiment_replays_all_declared_variants_on_matched_origins(news,data,monkeypatch):
     from backend.app.news.forecasting import experiment
     # Fixture extractor: validates scientific plumbing without requiring paid API.
     monkeypatch.setattr(news,'packet',lambda symbol,origin,*a:{'id':'fixture','origin':origin})

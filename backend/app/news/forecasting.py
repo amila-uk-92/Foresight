@@ -15,7 +15,7 @@ from backend.app.forecasting.contracts import register_specialist_market, coordi
 from backend.app.forecasting.publisher import Publisher
 from backend.app.forecasting.evaluator import evaluate
 
-VARIANTS = {"price_only": (None, False), "price_keywords": ("keywords", False), "price_jev": ("jev", False), "news_jev": ("jev", True)}
+VARIANTS = {"price_only": (None, False), "price_keywords": ("keywords", False), "price_jev": ("jev", False), "news_jev": ("jev", True), "price_openai": ("openai", False), "news_openai": ("openai", True)}
 GATES = {"day7_min_improvement_fraction": 0.01, "paired_95pct_upper_below_zero": True,
          "other_horizon_max_regression_fraction": 0.02, "minimum_complete_origins": 60,
          "coverage_80pct_bounds": [0.7, 0.9], "interval_and_brier_no_worse": True,
@@ -23,7 +23,7 @@ GATES = {"day7_min_improvement_fraction": 0.01, "paired_95pct_upper_below_zero":
 
 
 def implementation_revision():
-    return digest({p.name: p.read_text() for p in [Path(__file__), Path(__file__).with_name("service.py"), Path(__file__).with_name("classifiers.py"), Path(numerical.__file__)]})
+    return digest({p.name: p.read_text() for p in [Path(__file__), Path(__file__).with_name("service.py"), Path(__file__).with_name("classifiers.py"), Path(__file__).with_name("openai_classifier.py"), Path(numerical.__file__)]})
 
 
 class FeatureData:
@@ -171,7 +171,7 @@ def experiment(service, data, config, check=lambda: None, progress=lambda *a, **
     for j, t in enumerate(origin_times):
         check()
         packet = service.packet(data.market.symbol, numerical.iso(t), config["evidence_lookback_days"], config["policy"], snapshot)
-        features = {name: service.features(packet, name) for name in ("keywords", "jev")}
+        features = {name: service.features(packet, name) for name in ("keywords", "jev", "openai")}
         rows[int(t)] = features
         names = features["keywords"]["names"]
         if j % 50 == 0:
